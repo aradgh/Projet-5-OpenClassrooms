@@ -1,5 +1,6 @@
 package com.safetynet.alerts.model;
 
+import java.util.List;
 import java.util.UUID;
 
 public class MedicalRecord {
@@ -8,8 +9,8 @@ public class MedicalRecord {
     private String firstName;
     private String lastName;
     private String birthdate;
-    private String[] medications;
-    private String allergies;
+    private List<String> medications;
+    private List<String> allergies;
 
     public UUID getId() {
         return id;
@@ -51,19 +52,19 @@ public class MedicalRecord {
         this.birthdate = birthdate;
     }
 
-    public String[] getMedications() {
+    public List<String> getMedications() {
         return medications;
     }
 
-    public void setMedications(String[] medications) {
+    public void setMedications(List<String> medications) {
         this.medications = medications;
     }
 
-    public String getAllergies() {
+    public List<String> getAllergies() {
         return allergies;
     }
 
-    public void setAllergies(String allergies) {
+    public void setAllergies(List<String> allergies) {
         this.allergies = allergies;
     }
 }
