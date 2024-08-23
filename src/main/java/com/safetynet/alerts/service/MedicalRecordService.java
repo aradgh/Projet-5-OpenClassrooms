@@ -2,33 +2,33 @@ package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.repository.MedicalRecordRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.List;
-
+@Service
 public class MedicalRecordService {
+    @Autowired
     private MedicalRecordRepository medicalRecordRepository;
 
-    public List<MedicalRecord> findAll() {
-        return medicalRecordRepository.findAll();
+    public void addMedicalRecord(MedicalRecord medicalRecord) {
+        medicalRecordRepository.save(medicalRecord);
     }
 
-    public List<MedicalRecord> findByFirstNameAndLastName(String firstName, String lastName) {
-        return (List<MedicalRecord>) medicalRecordRepository.findByFirstNameAndLastName(firstName, lastName);
+    public boolean updateMedicalRecord(MedicalRecord medicalRecord) {
+        MedicalRecord existingMedicalRecord = medicalRecordRepository.findByFirstNameAndLastName(medicalRecord.getFirstName(), medicalRecord.getLastName());
+        if (existingMedicalRecord != null) {
+            medicalRecordRepository.save(medicalRecord);
+            return true;
+        }
+        return false;
     }
 
-    public List<MedicalRecord> findByBirthdate(String birthdate) {
-        return (List<MedicalRecord>) medicalRecordRepository.findByBirthdate(birthdate);
-    }
-
-    public List<MedicalRecord> findByAllergies(String allergies) {
-        return (List<MedicalRecord>) medicalRecordRepository.findByAllergies(allergies);
-    }
-
-    public List<MedicalRecord> findByMedications(String medications) {
-        return (List<MedicalRecord>) medicalRecordRepository.findByMedications(medications);
-    }
-
-    public MedicalRecord save(MedicalRecord medicalRecord) {
-        return medicalRecordRepository.save(medicalRecord);
+    public boolean deleteMedicalRecord(String firstName, String lastName) {
+        MedicalRecord existingMedicalRecord = medicalRecordRepository.findByFirstNameAndLastName(firstName, lastName);
+        if (existingMedicalRecord != null) {
+            medicalRecordRepository.delete(existingMedicalRecord);
+            return true;
+        }
+        return false;
     }
 }
