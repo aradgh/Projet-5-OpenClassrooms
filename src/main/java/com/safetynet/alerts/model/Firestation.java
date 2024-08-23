@@ -2,7 +2,7 @@ package com.safetynet.alerts.model;
 
 import java.util.UUID;
 
-public class FireStation {
+public class Firestation {
     private UUID id;
     private String address;
     private String station;
