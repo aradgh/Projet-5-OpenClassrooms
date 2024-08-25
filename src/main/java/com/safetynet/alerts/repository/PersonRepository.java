@@ -3,23 +3,20 @@ package com.safetynet.alerts.repository;
 import com.safetynet.alerts.model.Person;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public interface PersonRepository extends Repository<Person> {
+@Repository
+public class PersonRepository {
+    private Map<String, Person> persons = new HashMap<>();
 
-    Person findByFirstNameAndLastName(String firstName, String lastName);
+    // Initialisation des données
+    public PersonRepository(List<Person> persons) {
+        for (Person person : persons) {
+            String key = person.getFirstName() + person.getLastName();
+            this.persons.put(key, person);
+        }
+    }
 
-    Person findByAddress(String address);
-
-    Person findByZip(String zip);
-
-    Person findByCity(String city);
-
-    Person findByPhone(String phone);
-
-    Person findByEmail(String email);
-    
-    List<Person> findAll();
-
-    Person save(Person person);
 }
