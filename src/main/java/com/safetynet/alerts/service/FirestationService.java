@@ -7,16 +7,21 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class FirestationService {
-    @Autowired
-    private FirestationRepository firestationRepository;
+    private final FirestationRepository firestationRepository;
 
-    public void addFirestation(Firestation firestation) {
+    public FirestationService(FirestationRepository firestationRepository) {
+        this.firestationRepository = firestationRepository;
+    }
+
+    public Firestation addFirestation(Firestation firestation) {
         firestationRepository.save(firestation);
+        return firestation;
     }
 
     public boolean updateFirestation(Firestation firestation) {
         Firestation existingFirestation = firestationRepository.findByAddress(firestation.getAddress());
         if (existingFirestation != null) {
+//            Toute la logique métier se fait dans le service
             firestationRepository.save(firestation);
             return true;
         }
