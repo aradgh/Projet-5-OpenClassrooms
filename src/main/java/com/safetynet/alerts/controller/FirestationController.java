@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/firestation")
 public class FirestationController {
-    @Autowired
-    private FirestationService firestationService;
+    private final FirestationService firestationService;
+
+    public FirestationController(FirestationService firestationService) {
+        this.firestationService = firestationService;
+    }
 
     @PostMapping
     public ResponseEntity<String> addFirestation(@RequestBody Firestation firestation) {

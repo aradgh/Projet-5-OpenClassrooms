@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/medicalrecord")
 public class MedicalRecordController {
-    @Autowired
-    private MedicalRecordService medicalRecordService;
+    private final MedicalRecordService medicalRecordService;
+
+    public MedicalRecordController(MedicalRecordService medicalRecordService) {
+        this.medicalRecordService = medicalRecordService;
+    }
 
     @PostMapping
     public ResponseEntity<String> addMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
