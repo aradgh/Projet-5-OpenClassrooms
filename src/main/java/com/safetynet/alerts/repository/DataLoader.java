@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class DataLoader {
-    private static final String DATA_FILE = "data.json";
+    public static final String DATA_FILE = "data.json";
 
     public static void loadData(PersonRepository personRepo, FirestationRepository firestationRepo, MedicalRecordRepository medicalRecordRepo) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
