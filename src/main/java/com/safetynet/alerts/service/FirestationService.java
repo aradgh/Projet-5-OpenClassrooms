@@ -2,8 +2,9 @@ package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.Firestation;
 import com.safetynet.alerts.repository.FirestationRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.io.IOException;
 
 @Service
 public class FirestationService {
@@ -13,25 +14,25 @@ public class FirestationService {
         this.firestationRepository = firestationRepository;
     }
 
-    public Firestation addFirestation(Firestation firestation) {
-        firestationRepository.save(firestation);
-        return firestation;
+    public void addFirestation(Firestation firestation) throws IOException {
+        firestationRepository.addFirestation(firestation);
     }
 
-    public boolean updateFirestation(Firestation firestation) {
+    public boolean updateFirestation(Firestation firestation) throws IOException {
         Firestation existingFirestation = firestationRepository.findByAddress(firestation.getAddress());
         if (existingFirestation != null) {
-//            Toute la logique métier se fait dans le service
-            firestationRepository.save(firestation);
+            existingFirestation.setStation(firestation.getStation());
+            existingFirestation.setAddress(firestation.getAddress());
+            firestationRepository.updateFirestation(firestation);
             return true;
         }
         return false;
     }
 
-    public boolean deleteFirestation(String address) {
+    public boolean deleteFirestation(String address) throws IOException {
         Firestation existingFirestation = firestationRepository.findByAddress(address);
         if (existingFirestation != null) {
-            firestationRepository.delete(existingFirestation);
+            firestationRepository.deleteFirestation(existingFirestation.getAddress());
             return true;
         }
         return false;
