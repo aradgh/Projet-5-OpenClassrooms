@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+
 @RestController
 @RequestMapping("/person")
 public class PersonController {
@@ -17,13 +19,13 @@ public class PersonController {
     }
 
     @PostMapping
-    public ResponseEntity<String> addPerson(@RequestBody Person person) {
+    public ResponseEntity<String> addPerson(@RequestBody Person person) throws IOException {
         personService.addPerson(person);
         return ResponseEntity.status(HttpStatus.CREATED).body("Person added successfully.");
     }
 
     @PutMapping
-    public ResponseEntity<String> updatePerson(@RequestBody Person person) {
+    public ResponseEntity<String> updatePerson(@RequestBody Person person) throws IOException {
         boolean updated = personService.updatePerson(person);
         if (updated) {
             return ResponseEntity.ok("Person updated successfully.");
@@ -33,7 +35,7 @@ public class PersonController {
     }
 
     @DeleteMapping
-    public ResponseEntity<String> deletePerson(@RequestParam String firstName, @RequestParam String lastName) {
+    public ResponseEntity<String> deletePerson(@RequestParam String firstName, @RequestParam String lastName) throws IOException {
         boolean deleted = personService.deletePerson(firstName, lastName);
         if (deleted) {
             return ResponseEntity.ok("Person deleted successfully.");
