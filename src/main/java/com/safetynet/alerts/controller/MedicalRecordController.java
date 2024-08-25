@@ -2,10 +2,11 @@ package com.safetynet.alerts.controller;
 
 import com.safetynet.alerts.model.MedicalRecord;
 import com.safetynet.alerts.service.MedicalRecordService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/medicalrecord")
@@ -17,13 +18,13 @@ public class MedicalRecordController {
     }
 
     @PostMapping
-    public ResponseEntity<String> addMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
+    public ResponseEntity<String> addMedicalRecord(@RequestBody MedicalRecord medicalRecord) throws IOException {
         medicalRecordService.addMedicalRecord(medicalRecord);
         return ResponseEntity.status(HttpStatus.CREATED).body("Medical record added successfully.");
     }
 
     @PutMapping
-    public ResponseEntity<String> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord) {
+    public ResponseEntity<String> updateMedicalRecord(@RequestBody MedicalRecord medicalRecord) throws IOException {
         boolean updated = medicalRecordService.updateMedicalRecord(medicalRecord);
         if (updated) {
             return ResponseEntity.ok("Medical record updated successfully.");
@@ -33,7 +34,7 @@ public class MedicalRecordController {
     }
 
     @DeleteMapping
-    public ResponseEntity<String> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName) {
+    public ResponseEntity<String> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName) throws IOException {
         boolean deleted = medicalRecordService.deleteMedicalRecord(firstName, lastName);
         if (deleted) {
             return ResponseEntity.ok("Medical record deleted successfully.");
