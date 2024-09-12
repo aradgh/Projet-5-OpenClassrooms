@@ -7,15 +7,11 @@ import com.safetynet.alerts.model.Person;
 import java.util.List;
 
 public class Data {
-    private List<Person> persons;
-    private List<Firestation> firestations;
-    private List<MedicalRecord> medicalRecords;
+    public static List<Person> persons;
+    public static List<Firestation> firestations;
+    public static List<MedicalRecord> medicalrecords;
 
-    public Data(List<Person> persons, List<Firestation> firestations, List<MedicalRecord> medicalRecords) {
-        this.persons = persons;
-        this.firestations = firestations;
-        this.medicalRecords = medicalRecords;
-    }
+    public Data() {}
 
     public List<Person> getPersons() {
         return persons;
@@ -33,11 +29,11 @@ public class Data {
         this.firestations = firestations;
     }
 
-    public List<MedicalRecord> getMedicalRecords() {
-        return medicalRecords;
+    public List<MedicalRecord> getMedicalrecords() {
+        return medicalrecords;
     }
 
-    public void setMedicalRecords(List<MedicalRecord> medicalRecords) {
-        this.medicalRecords = medicalRecords;
+    public void setMedicalrecords(List<MedicalRecord> medicalrecords) {
+        this.medicalrecords = medicalrecords;
     }
 }
