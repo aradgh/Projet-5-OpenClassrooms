@@ -51,6 +51,6 @@ public class MedicalRecordRepository {
     }
 
     private void saveToFile() throws IOException {
-        JsonFileUtil.saveData(null, null, findAll());
+        JsonFileUtil.saveData();
     }
 }

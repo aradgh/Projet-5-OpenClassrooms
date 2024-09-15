@@ -50,8 +50,8 @@ public class PersonRepository {
             saveToFile();
         }
     }
-
+// Utiliser l'overloading/polymorphing
     private void saveToFile() throws IOException {
-        JsonFileUtil.saveData(findAll(), null, null);
+        JsonFileUtil.saveData();
     }
 }

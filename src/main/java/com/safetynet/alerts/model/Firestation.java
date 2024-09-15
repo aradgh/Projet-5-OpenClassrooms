@@ -3,7 +3,7 @@ package com.safetynet.alerts.model;
 import java.util.UUID;
 
 public class Firestation {
-    private UUID id;
+    private UUID id = UUID.randomUUID();
     private String address;
     private String station;
 

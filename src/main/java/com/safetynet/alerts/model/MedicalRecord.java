@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.UUID;
 
 public class MedicalRecord {
-    private UUID id;
-    private UUID personId;
+    private UUID id = UUID.randomUUID();
+//    private UUID personId;
     private String firstName;
     private String lastName;
     private String birthdate;
@@ -20,13 +20,13 @@ public class MedicalRecord {
         this.id = id;
     }
 
-    public UUID getPersonId() {
-        return personId;
-    }
-
-    public void setPersonId(UUID personId) {
-        this.personId = personId;
-    }
+//    public UUID getPersonId() {
+//        return personId;
+//    }
+//
+//    public void setPersonId(UUID personId) {
+//        this.personId = personId;
+//    }
 
     public String getFirstName() {
         return firstName;

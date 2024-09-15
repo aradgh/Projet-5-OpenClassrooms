@@ -3,7 +3,7 @@ package com.safetynet.alerts.model;
 import java.util.UUID;
 
 public class Person {
-    private UUID id;
+    private UUID id = UUID.randomUUID();
     private String firstName;
     private String lastName;
     private String address;
@@ -74,5 +74,10 @@ public class Person {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + "id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", address='" + address + '\'' + ", city='" + city + '\'' + ", zip='" + zip + '\'' + ", phone='" + phone + '\'' + ", email='" + email + '\'' + '}';
     }
 }

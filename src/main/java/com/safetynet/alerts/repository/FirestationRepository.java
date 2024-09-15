@@ -47,6 +47,6 @@ public class FirestationRepository {
     }
 
     private void saveToFile() throws IOException {
-        JsonFileUtil.saveData(null, findAll(), null);
+        JsonFileUtil.saveData();
     }
 }
