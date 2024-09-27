@@ -4,10 +4,10 @@ import com.safetynet.alerts.model.MedicalRecord;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.List;
+import java.util.UUID;
 
 import static com.safetynet.alerts.repository.Data.medicalrecords;
-import static com.safetynet.alerts.repository.Data.persons;
 import static com.safetynet.alerts.repository.JsonFileUtil.saveData;
 
 @Repository
