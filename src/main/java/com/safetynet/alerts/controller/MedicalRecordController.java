@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/medicalrecord")
@@ -34,8 +35,8 @@ public class MedicalRecordController {
     }
 
     @DeleteMapping
-    public ResponseEntity<String> deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName) throws IOException {
-        boolean deleted = medicalRecordService.deleteMedicalRecord(firstName, lastName);
+    public ResponseEntity<String> deleteMedicalRecord(@RequestParam UUID medicalRecordId) throws IOException {
+        boolean deleted = medicalRecordService.deleteMedicalRecord(medicalRecordId);
         if (deleted) {
             return ResponseEntity.ok("Medical record deleted successfully.");
         } else {

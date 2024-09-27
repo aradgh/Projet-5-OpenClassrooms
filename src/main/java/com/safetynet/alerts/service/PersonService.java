@@ -2,7 +2,6 @@ package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.PersonRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -10,8 +9,11 @@ import java.util.UUID;
 
 @Service
 public class PersonService {
-    @Autowired
-    private PersonRepository personRepository;
+    private final PersonRepository personRepository;
+
+    public PersonService(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
 
     public void addPerson(Person person) throws IOException {
         personRepository.addPerson(person);

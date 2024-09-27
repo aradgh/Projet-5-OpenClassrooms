@@ -6,19 +6,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.UUID;
 
 @Service
 public class MedicalRecordService {
-    @Autowired
-    private MedicalRecordRepository medicalRecordRepository;
+    private final MedicalRecordRepository medicalRecordRepository;
+
+    public MedicalRecordService(MedicalRecordRepository medicalRecordRepository) {
+        this.medicalRecordRepository = medicalRecordRepository;
+    }
 
     public void addMedicalRecord(MedicalRecord medicalRecord) throws IOException {
         medicalRecordRepository.addMedicalRecord(medicalRecord);
     }
 
     public boolean updateMedicalRecord(MedicalRecord medicalRecord) throws IOException {
-        MedicalRecord existingMedicalRecord = medicalRecordRepository.findByFirstNameAndLastName(medicalRecord.getFirstName(), medicalRecord.getLastName());
+        MedicalRecord existingMedicalRecord = medicalRecordRepository.findById(medicalRecord.getId());
         if (existingMedicalRecord != null) {
+            existingMedicalRecord.setFirstName(medicalRecord.getFirstName());
+            existingMedicalRecord.setLastName(medicalRecord.getLastName());
             existingMedicalRecord.setBirthdate(medicalRecord.getBirthdate());
             existingMedicalRecord.setMedications(medicalRecord.getMedications());
             existingMedicalRecord.setAllergies(medicalRecord.getAllergies());
@@ -28,13 +34,7 @@ public class MedicalRecordService {
         return false;
     }
 
-    public boolean deleteMedicalRecord(String firstName, String lastName) throws IOException {
-        MedicalRecord existingMedicalRecord = medicalRecordRepository.findByFirstNameAndLastName(firstName, lastName);
-        if (existingMedicalRecord != null) {
-            medicalRecordRepository.deleteMedicalRecord(existingMedicalRecord.getFirstName(),
-                existingMedicalRecord.getLastName());
-            return true;
-        }
-        return false;
+    public boolean deleteMedicalRecord(UUID medicalRecordId) throws IOException {
+        return medicalRecordRepository.deleteMedicalRecord(medicalRecordId);
     }
 }

@@ -4,53 +4,43 @@ import com.safetynet.alerts.model.MedicalRecord;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
+import static com.safetynet.alerts.repository.Data.medicalrecords;
+import static com.safetynet.alerts.repository.Data.persons;
+import static com.safetynet.alerts.repository.JsonFileUtil.saveData;
 
 @Repository
 public class MedicalRecordRepository {
-    private Map<String, MedicalRecord> medicalRecords = new HashMap<>();
-
-    public MedicalRecordRepository(List<MedicalRecord> medicalRecords) {
-        for (MedicalRecord medicalRecord : medicalRecords) {
-            String key = medicalRecord.getFirstName() + medicalRecord.getLastName();
-            this.medicalRecords.put(key, medicalRecord);
-        }
-    }
-
     public List<MedicalRecord> findAll() {
-        return new ArrayList<>(medicalRecords.values());
+        return medicalrecords;
     }
 
-    public MedicalRecord findByFirstNameAndLastName(String firstName, String lastName) {
-        return medicalRecords.get(firstName + lastName);
+    public MedicalRecord findById(UUID medicalRecordId) {
+        return medicalrecords.stream()
+            .filter(medicalRecord -> medicalRecord.getId().equals(medicalRecordId))
+            .findFirst()
+            .orElse(null);
     }
 
     public void addMedicalRecord(MedicalRecord medicalRecord) throws IOException {
-        String key = medicalRecord.getFirstName() + medicalRecord.getLastName();
-        medicalRecords.put(key, medicalRecord);
-        saveToFile();
+        medicalrecords.add(medicalRecord);
+        saveData();
     }
 
     public void updateMedicalRecord(MedicalRecord medicalRecord) throws IOException {
-        String key = medicalRecord.getFirstName() + medicalRecord.getLastName();
-        if (medicalRecords.containsKey(key)) {
-            medicalRecords.put(key, medicalRecord);
-            saveToFile();
+        if (this.findById(medicalRecord.getId()) != null) {
+            medicalrecords.set(medicalrecords.indexOf(this.findById(medicalRecord.getId())), medicalRecord);
+            saveData();
         }
     }
 
-    public void deleteMedicalRecord(String firstName, String lastName) throws IOException {
-        String key = firstName + lastName;
-        if (medicalRecords.containsKey(key)) {
-            medicalRecords.remove(key);
-            saveToFile();
+    public boolean deleteMedicalRecord(UUID medicalRecordId) throws IOException {
+        if (this.findById(medicalRecordId) != null) {
+            medicalrecords.remove(this.findById(medicalRecordId));
+            saveData();
+            return true;
         }
-    }
-
-    private void saveToFile() throws IOException {
-        JsonFileUtil.saveData();
+        return false;
     }
 }
