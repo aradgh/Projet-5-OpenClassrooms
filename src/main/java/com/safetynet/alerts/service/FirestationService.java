@@ -5,6 +5,7 @@ import com.safetynet.alerts.repository.FirestationRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.UUID;
 
 @Service
 public class FirestationService {
@@ -19,7 +20,7 @@ public class FirestationService {
     }
 
     public boolean updateFirestation(Firestation firestation) throws IOException {
-        Firestation existingFirestation = firestationRepository.findByAddress(firestation.getAddress());
+        Firestation existingFirestation = firestationRepository.findById(firestation.getId());
         if (existingFirestation != null) {
             existingFirestation.setStation(firestation.getStation());
             existingFirestation.setAddress(firestation.getAddress());
@@ -29,12 +30,7 @@ public class FirestationService {
         return false;
     }
 
-    public boolean deleteFirestation(String address) throws IOException {
-        Firestation existingFirestation = firestationRepository.findByAddress(address);
-        if (existingFirestation != null) {
-            firestationRepository.deleteFirestation(existingFirestation.getAddress());
-            return true;
-        }
-        return false;
+    public boolean deleteFirestation(UUID firestationId) throws IOException {
+        return firestationRepository.deleteFirestation(firestationId);
     }
 }

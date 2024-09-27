@@ -2,12 +2,12 @@ package com.safetynet.alerts.controller;
 
 import com.safetynet.alerts.model.Firestation;
 import com.safetynet.alerts.service.FirestationService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/firestation")
@@ -35,8 +35,8 @@ public class FirestationController {
     }
 
     @DeleteMapping
-    public ResponseEntity<String> deleteFirestation(@RequestParam String address) throws IOException {
-        boolean deleted = firestationService.deleteFirestation(address);
+    public ResponseEntity<String> deleteFirestation(@RequestParam UUID firestationId) throws IOException {
+        boolean deleted = firestationService.deleteFirestation(firestationId);
         if (deleted) {
             return ResponseEntity.ok("Firestation deleted successfully.");
         } else {

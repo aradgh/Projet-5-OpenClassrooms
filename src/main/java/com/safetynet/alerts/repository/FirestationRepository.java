@@ -4,49 +4,43 @@ import com.safetynet.alerts.model.Firestation;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+import java.util.UUID;
+
+import static com.safetynet.alerts.repository.Data.firestations;
+import static com.safetynet.alerts.repository.JsonFileUtil.saveData;
 
 @Repository
 public class FirestationRepository {
-    private Map<String, Firestation> firestations = new HashMap<>();
-
-    public FirestationRepository(List<Firestation> firestations) {
-        for (Firestation firestation : firestations) {
-            this.firestations.put(firestation.getAddress(), firestation);
-        }
-    }
-
     public List<Firestation> findAll() {
-        return new ArrayList<>(firestations.values());
+        return firestations;
     }
 
-    public Firestation findByAddress(String address) {
-        return firestations.get(address);
+    public Firestation findById(UUID firestationId) {
+        return firestations.stream()
+            .filter(firestation -> firestation.getId().equals(firestationId))
+            .findFirst()
+            .orElse(null);
     }
 
     public void addFirestation(Firestation firestation) throws IOException {
-        firestations.put(firestation.getAddress(), firestation);
-        saveToFile();
+        firestations.add(firestation);
+        saveData();
     }
 
     public void updateFirestation(Firestation firestation) throws IOException {
-        if (firestations.containsKey(firestation.getAddress())) {
-            firestations.put(firestation.getAddress(), firestation);
-            saveToFile();
+        if (this.findById(firestation.getId()) != null) {
+            firestations.set(firestations.indexOf(this.findById(firestation.getId())), firestation);
+            saveData();
         }
     }
 
-    public void deleteFirestation(String address) throws IOException {
-        if (firestations.containsKey(address)) {
-            firestations.remove(address);
-            saveToFile();
+    public boolean deleteFirestation(UUID firestationId) throws IOException {
+        if (this.findById(firestationId) != null) {
+            firestations.remove(this.findById(firestationId));
+            saveData();
+            return true;
         }
-    }
-
-    private void saveToFile() throws IOException {
-        JsonFileUtil.saveData();
+        return false;
     }
 }
