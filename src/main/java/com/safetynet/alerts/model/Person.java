@@ -75,9 +75,4 @@ public class Person {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
-    @Override
-    public String toString() {
-        return "Person{" + "id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + ", address='" + address + '\'' + ", city='" + city + '\'' + ", zip='" + zip + '\'' + ", phone='" + phone + '\'' + ", email='" + email + '\'' + '}';
-    }
 }
