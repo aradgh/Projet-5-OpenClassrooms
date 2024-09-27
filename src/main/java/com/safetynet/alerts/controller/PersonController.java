@@ -2,12 +2,12 @@ package com.safetynet.alerts.controller;
 
 import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.service.PersonService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/person")
@@ -35,8 +35,8 @@ public class PersonController {
     }
 
     @DeleteMapping
-    public ResponseEntity<String> deletePerson(@RequestParam String firstName, @RequestParam String lastName) throws IOException {
-        boolean deleted = personService.deletePerson(firstName, lastName);
+    public ResponseEntity<String> deletePerson(@RequestParam UUID personId) throws IOException {
+        boolean deleted = personService.deletePerson(personId);
         if (deleted) {
             return ResponseEntity.ok("Person deleted successfully.");
         } else {

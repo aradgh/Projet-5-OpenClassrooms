@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.UUID;
 
 @Service
 public class PersonService {
@@ -17,7 +18,7 @@ public class PersonService {
     }
 
     public boolean updatePerson(Person person) throws IOException {
-        Person existingPerson = personRepository.findByFirstNameAndLastName(person.getFirstName(), person.getLastName());
+        Person existingPerson = personRepository.findById(person.getId());
         if (existingPerson != null) {
             existingPerson.setAddress(person.getAddress());
             existingPerson.setCity(person.getCity());
@@ -30,12 +31,7 @@ public class PersonService {
         return false;
     }
 
-    public boolean deletePerson(String firstName, String lastName) throws IOException {
-        Person existingPerson = personRepository.findByFirstNameAndLastName(firstName, lastName);
-        if (existingPerson != null) {
-            personRepository.deletePerson(existingPerson.getFirstName(), existingPerson.getLastName());
-            return true;
-        }
-        return false;
+    public boolean deletePerson(UUID personId) throws IOException {
+        return personRepository.deletePerson(personId);
     }
 }
