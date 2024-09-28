@@ -5,7 +5,7 @@ import java.util.UUID;
 public class Firestation {
     private final UUID id = UUID.randomUUID();
     private String address;
-    private String station;
+    private int station;
 
     public UUID getId() {
         return id;
@@ -19,11 +19,9 @@ public class Firestation {
         this.address = address;
     }
 
-    public String getStation() {
-        return station;
-    }
+    public int getStation() { return station; }
 
-    public void setStation(String station) {
+    public void setStation(int station) {
         this.station = station;
     }
 }
