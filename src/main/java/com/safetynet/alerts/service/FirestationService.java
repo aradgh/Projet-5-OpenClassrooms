@@ -22,9 +22,13 @@ public class FirestationService {
     public boolean updateFirestation(Firestation firestation) throws IOException {
         Firestation existingFirestation = firestationRepository.findById(firestation.getId());
         if (existingFirestation != null) {
-            existingFirestation.setStation(firestation.getStation());
-            existingFirestation.setAddress(firestation.getAddress());
-            firestationRepository.updateFirestation(firestation);
+            if (firestation.getStation() > 0 && existingFirestation.getStation() != firestation.getStation()) {
+                existingFirestation.setStation(firestation.getStation());
+            }
+            if (firestation.getAddress() != null && !firestation.getAddress().isEmpty() && !existingFirestation.getAddress().equals(firestation.getAddress())) {
+                existingFirestation.setAddress(firestation.getAddress());
+            }
+            firestationRepository.updateFirestation(existingFirestation);
             return true;
         }
         return false;
