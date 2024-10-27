@@ -1,19 +1,26 @@
 package com.safetynet.alerts.service;
 
+import com.safetynet.alerts.model.Firestation;
 import com.safetynet.alerts.model.Person;
+import com.safetynet.alerts.repository.FirestationRepository;
 import com.safetynet.alerts.repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class PersonService {
     private final PersonRepository personRepository;
+    private final FirestationRepository firestationRepository;
 
-    public PersonService(PersonRepository personRepository) {
+    public PersonService(PersonRepository personRepository, FirestationRepository firestationRepository) {
         this.personRepository = personRepository;
+        this.firestationRepository = firestationRepository;
     }
 
     public void addPerson(Person person) throws IOException {
@@ -102,6 +109,29 @@ public class PersonService {
             return true;
         }
         return false;
+    }
+
+    public List<Person> getPersonsByAddress(String address) {
+        return personRepository.findByAddress(address);
+    }
+
+    public List<Person> getPersonsByFirestation(int stationNumber) {
+        List<Firestation> firestations = firestationRepository.findByStation(stationNumber);
+        List<Person> persons = new ArrayList<>();
+        for (Firestation firestation : firestations) {
+            persons.addAll(personRepository.findByAddress(firestation.getAddress()));
+        }
+        return persons;
+    }
+
+    public List<String> getEmailsByCity(String city) {
+        List<Person> persons = personRepository.findByCity(city);
+        return persons.stream().map(Person::getEmail).toList();
+    }
+
+    public List<String> getPhonesByFirestation(int stationNumber) {
+        List<Person> persons = getPersonsByFirestation(stationNumber);
+        return persons.stream().map(Person::getPhone).toList();
     }
 
 }

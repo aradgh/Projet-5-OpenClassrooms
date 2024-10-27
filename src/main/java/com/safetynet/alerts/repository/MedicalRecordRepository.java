@@ -43,4 +43,11 @@ public class MedicalRecordRepository {
         }
         return false;
     }
+
+    public MedicalRecord findByFirstNameAndLastName(String firstName, String lastName) {
+        return medicalrecords.stream()
+            .filter(medicalRecord -> medicalRecord.getFirstName().equals(firstName) && medicalRecord.getLastName().equals(lastName))
+            .findFirst()
+            .orElse(null);
+    }
 }

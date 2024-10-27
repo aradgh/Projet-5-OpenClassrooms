@@ -43,4 +43,16 @@ public class PersonRepository {
         }
         return false;
     }
+
+    public List<Person> findByAddress(String address) {
+        return persons.stream()
+            .filter(person -> person.getAddress().contains(address))
+            .toList();
+    }
+
+    public List<Person> findByCity(String city) {
+        return persons.stream()
+            .filter(person -> person.getCity().equals(city))
+            .toList();
+    }
 }

@@ -5,6 +5,9 @@ import com.safetynet.alerts.repository.MedicalRecordRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -86,6 +89,21 @@ public class MedicalRecordService {
             return true;
         }
         return false;
+    }
+
+    public int calculateAge(String birthdate) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        LocalDate birthDate = LocalDate.parse(birthdate, formatter);
+        return Period.between(birthDate, LocalDate.now()).getYears();
+    }
+
+    public boolean isChild(String birthdate) {
+        return calculateAge(birthdate) <= 18;
+    }
+
+    // Méthode pour récupérer les antécédents médicaux d'une personne
+    public MedicalRecord getMedicalRecordByPerson(String firstName, String lastName) {
+        return medicalRecordRepository.findByFirstNameAndLastName(firstName, lastName);
     }
 
 }

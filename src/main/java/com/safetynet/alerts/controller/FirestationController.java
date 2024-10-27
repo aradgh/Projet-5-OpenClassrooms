@@ -43,4 +43,10 @@ public class FirestationController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Firestation not found.");
         }
     }
+
+//    @GetMapping
+//    public ResponseEntity<String> getPersonsByStation(@RequestParam int stationNumber) {
+//        String personsList = firestationService.getPersonsListByStation(stationNumber);
+//        return ResponseEntity.ok(personsList);
+//    }
 }
