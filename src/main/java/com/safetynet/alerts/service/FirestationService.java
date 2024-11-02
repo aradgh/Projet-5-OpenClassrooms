@@ -103,12 +103,7 @@ public class FirestationService {
 
     private int countChildren(List<Person> persons) {
         return (int) persons.stream()
-            .filter(person -> {
-                String birthdate = medicalRecordService
-                    .getMedicalRecordByPerson(person.getFirstName(), person.getLastName())
-                    .getBirthdate();
-                return medicalRecordService.isChild(birthdate);
-            })
+            .filter(medicalRecordService::isChild)
             .count();
     }
 

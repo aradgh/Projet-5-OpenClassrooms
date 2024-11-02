@@ -1,6 +1,7 @@
 package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.MedicalRecord;
+import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.MedicalRecordRepository;
 import org.springframework.stereotype.Service;
 
@@ -97,8 +98,9 @@ public class MedicalRecordService {
         return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
-    public boolean isChild(String birthdate) {
-        return calculateAge(birthdate) <= 18;
+    public boolean isChild(Person person) {
+        MedicalRecord personRecord = getMedicalRecordByPerson(person.getFirstName(), person.getLastName());
+        return personRecord != null && calculateAge(personRecord.getBirthdate()) <= 18;
     }
 
     public MedicalRecord getMedicalRecordByPerson(String firstName, String lastName) {

@@ -41,7 +41,7 @@ public class PersonInfoDTO {
 
     @Override
     public String toString() {
-        return "PersonInfoDTO { " +
+        return "\n\tPersonInfoDTO { " +
                "firstName: '" + firstName + '\'' +
                ", lastName: '" + lastName + '\'' +
                ", address: '" + address + '\'' +

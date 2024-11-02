@@ -1,7 +1,6 @@
 package com.safetynet.alerts.service;
 
-import com.safetynet.alerts.model.Firestation;
-import com.safetynet.alerts.model.Person;
+import com.safetynet.alerts.model.*;
 import com.safetynet.alerts.repository.FirestationRepository;
 import com.safetynet.alerts.repository.PersonRepository;
 import org.springframework.stereotype.Service;
@@ -14,10 +13,14 @@ import java.util.stream.Collectors;
 public class PersonService {
     private final PersonRepository personRepository;
     private final FirestationRepository firestationRepository;
+    private final MedicalRecordService medicalRecordService;
 
-    public PersonService(PersonRepository personRepository, FirestationRepository firestationRepository) {
+    public PersonService(PersonRepository personRepository, FirestationRepository firestationRepository,
+                         MedicalRecordService medicalRecordService
+    ) {
         this.personRepository = personRepository;
         this.firestationRepository = firestationRepository;
+        this.medicalRecordService = medicalRecordService;
     }
 
     public void addPerson(Person person) throws IOException {
@@ -108,10 +111,6 @@ public class PersonService {
         return false;
     }
 
-    public List<Person> getPersonsByAddress(String address) {
-        return personRepository.findByAddress(address);
-    }
-
     public List<Person> getPersonsByFirestation(int stationNumber) {
         List<Firestation> firestations = firestationRepository.findByStation(stationNumber);
         List<Person> persons = new ArrayList<>();
@@ -119,6 +118,47 @@ public class PersonService {
             persons.addAll(personRepository.findByAddress(firestation.getAddress()));
         }
         return persons;
+    }
+
+    public Set<ChildAlertDTO> getChildrenByAddress(String address) {
+        List<Person> personsAtAddress = getPersonsByAddress(address);
+
+        return personsAtAddress.stream()
+            .filter(medicalRecordService::isChild)
+            .map(child -> buildChildAlertDTO(child, personsAtAddress))
+            .collect(Collectors.toSet());
+    }
+
+    private ChildAlertDTO buildChildAlertDTO(Person child, List<Person> householdMembers) {
+        MedicalRecord personMedicalRecord = medicalRecordService.getMedicalRecordByPerson(child.getFirstName(), child.getLastName());
+
+        ChildAlertDTO childDTO = new ChildAlertDTO();
+        childDTO.setFirstName(child.getFirstName());
+        childDTO.setLastName(child.getLastName());
+        childDTO.setAge(medicalRecordService.calculateAge(personMedicalRecord.getBirthdate()));
+        childDTO.setHouseholdMembers(getHouseholdMembers(child, householdMembers));
+
+        return childDTO;
+    }
+
+    private Set<PersonInfoDTO> getHouseholdMembers(Person child, List<Person> personsAtAddress) {
+        return personsAtAddress.stream()
+            .filter(member -> !member.equals(child))
+            .map(this::mapToPersonInfoDTO)
+            .collect(Collectors.toSet());
+    }
+
+    private PersonInfoDTO mapToPersonInfoDTO(Person person) {
+        PersonInfoDTO personInfoDTO = new PersonInfoDTO();
+        personInfoDTO.setFirstName(person.getFirstName());
+        personInfoDTO.setLastName(person.getLastName());
+        personInfoDTO.setAddress(person.getAddress());
+        personInfoDTO.setPhone(person.getPhone());
+        return personInfoDTO;
+    }
+
+    public List<Person> getPersonsByAddress(String address) {
+        return personRepository.findByAddress(address);
     }
 
     public Set<String> getEmailsByCity(String city) {
@@ -130,5 +170,4 @@ public class PersonService {
         List<Person> persons = getPersonsByFirestation(stationNumber);
         return persons.stream().map(Person::getPhone).collect(Collectors.toSet());
     }
-
 }
