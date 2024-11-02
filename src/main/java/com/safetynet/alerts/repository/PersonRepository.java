@@ -46,7 +46,7 @@ public class PersonRepository {
 
     public List<Person> findByAddress(String address) {
         return persons.stream()
-            .filter(person -> person.getAddress().contains(address))
+            .filter(person -> person.getAddress().equals(address))
             .toList();
     }
 
