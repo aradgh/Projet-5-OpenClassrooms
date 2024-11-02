@@ -7,10 +7,7 @@ import com.safetynet.alerts.repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -124,14 +121,14 @@ public class PersonService {
         return persons;
     }
 
-    public List<String> getEmailsByCity(String city) {
+    public Set<String> getEmailsByCity(String city) {
         List<Person> persons = personRepository.findByCity(city);
-        return persons.stream().map(Person::getEmail).toList();
+        return persons.stream().map(Person::getEmail).collect(Collectors.toSet());
     }
 
-    public List<String> getPhonesByFirestation(int stationNumber) {
+    public Set<String> getPhonesByFirestation(int stationNumber) {
         List<Person> persons = getPersonsByFirestation(stationNumber);
-        return persons.stream().map(Person::getPhone).toList();
+        return persons.stream().map(Person::getPhone).collect(Collectors.toSet());
     }
 
 }
