@@ -161,13 +161,13 @@ public class PersonService {
         return personRepository.findByAddress(address);
     }
 
+    public Set<String> getPhoneNumbersByFirestation(int stationNumber) {
+        List<Person> persons = getPersonsByFirestation(stationNumber);
+        return persons.stream().map(Person::getPhone).collect(Collectors.toSet());
+    }
+
     public Set<String> getEmailsByCity(String city) {
         List<Person> persons = personRepository.findByCity(city);
         return persons.stream().map(Person::getEmail).collect(Collectors.toSet());
-    }
-
-    public Set<String> getPhonesByFirestation(int stationNumber) {
-        List<Person> persons = getPersonsByFirestation(stationNumber);
-        return persons.stream().map(Person::getPhone).collect(Collectors.toSet());
     }
 }

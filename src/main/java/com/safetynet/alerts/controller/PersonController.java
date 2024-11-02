@@ -60,4 +60,15 @@ public class PersonController {
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
+
+    @GetMapping("/phoneAlert")
+    public ResponseEntity<String> getPhoneAlertByFirestation(@RequestParam int firestation) {
+        Set<String> phoneNumbers  = personService.getPhoneNumbersByFirestation(firestation);
+
+        if (phoneNumbers.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.OK).body("No phone numbers found for the specified firestation.");
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(phoneNumbers.toString());
+    }
 }
