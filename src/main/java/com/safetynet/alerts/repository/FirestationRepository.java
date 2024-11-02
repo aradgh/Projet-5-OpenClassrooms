@@ -49,12 +49,4 @@ public class FirestationRepository {
             .filter(firestation -> firestation.getStation() == stationNumber)
             .toList();
     }
-
-    //    public String getPersonsListByStation(int stationNumber) {
-//        return firestations.stream()
-//            .filter(firestation -> firestation.getStation() == stationNumber)
-//            .map(Firestation::getAddress)
-//            .reduce(String::concat)
-//            .orElse("");
-//    }
 }

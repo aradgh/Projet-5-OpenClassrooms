@@ -1,6 +1,7 @@
 package com.safetynet.alerts.controller;
 
 import com.safetynet.alerts.model.Firestation;
+import com.safetynet.alerts.model.FirestationCoverageDTO;
 import com.safetynet.alerts.service.FirestationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +26,7 @@ public class FirestationController {
     }
 
     @PutMapping
-    public ResponseEntity<String> updateFirestation(@RequestBody Firestation firestation) throws IOException {
+    public ResponseEntity<String> updateFirestation(@RequestBody Firestation firestation) {
         boolean updated = firestationService.updateFirestation(firestation);
         if (updated) {
             return ResponseEntity.ok("Firestation updated successfully.");
@@ -44,9 +45,9 @@ public class FirestationController {
         }
     }
 
-//    @GetMapping
-//    public ResponseEntity<String> getPersonsByStation(@RequestParam int stationNumber) {
-//        String personsList = firestationService.getPersonsListByStation(stationNumber);
-//        return ResponseEntity.ok(personsList);
-//    }
+    @GetMapping
+    public ResponseEntity<String> getPersonsByStation(@RequestParam int stationNumber) {
+        FirestationCoverageDTO firestationCoverageDTO = firestationService.getCoverageByStation(stationNumber);
+        return ResponseEntity.ok(firestationCoverageDTO.toString());
+    }
 }

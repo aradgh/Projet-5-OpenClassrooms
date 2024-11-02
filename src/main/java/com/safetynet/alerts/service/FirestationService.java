@@ -1,21 +1,31 @@
 package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.Firestation;
+import com.safetynet.alerts.model.FirestationCoverageDTO;
 import com.safetynet.alerts.model.Person;
+import com.safetynet.alerts.model.PersonInfoDTO;
 import com.safetynet.alerts.repository.FirestationRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class FirestationService {
     private final FirestationRepository firestationRepository;
+    private final PersonService personService;
+    private final MedicalRecordService medicalRecordService;
 
-    public FirestationService(FirestationRepository firestationRepository) {
+    public FirestationService(FirestationRepository firestationRepository, PersonService personService,
+                              MedicalRecordService medicalRecordService
+    ) {
         this.firestationRepository = firestationRepository;
+        this.personService = personService;
+        this.medicalRecordService = medicalRecordService;
     }
 
     public void addFirestation(Firestation firestation) throws IOException {
@@ -43,23 +53,6 @@ public class FirestationService {
             .orElse(false);
     }
 
-    public boolean deleteFirestation(UUID firestationId) throws IOException {
-        return firestationRepository.deleteFirestation(firestationId);
-    }
-
-//    public String getPersonsListByStation(int stationNumber) {
-//        List<Firestation> firestationsByStation = firestationRepository.findAll()
-//            .stream()
-//            .filter(firestation -> firestation.getStation() == stationNumber)
-//            .toList();
-//        List<Person> personsListByStation = List.of();
-//        for (Firestation firestation : firestationsByStation) {
-//            personsListByStation.add(getPersonsListByAddress(firestation.getAddress()));
-//        }
-//        return firestationRepository.getPersonsListByStation(stationNumber);
-//    }
-
-
     private boolean updateStationIfNecessary(Firestation existingFirestation, int newStation) {
         if (newStation > 0 && existingFirestation.getStation() != newStation) {
             existingFirestation.setStation(newStation);
@@ -75,4 +68,48 @@ public class FirestationService {
         }
         return false;
     }
+
+    public boolean deleteFirestation(UUID firestationId) throws IOException {
+        return firestationRepository.deleteFirestation(firestationId);
+    }
+
+    public FirestationCoverageDTO getCoverageByStation(int stationNumber) {
+        List<Person> personsCovered = personService.getPersonsByFirestation(stationNumber);
+
+        Set<PersonInfoDTO> personInfoList = mapToPersonInfoDTOSet(personsCovered);
+        int numberOfChildren = countChildren(personsCovered);
+        int numberOfAdults = personsCovered.size() - numberOfChildren;
+
+        FirestationCoverageDTO responseDTO = new FirestationCoverageDTO();
+        responseDTO.setPersons(personInfoList);
+        responseDTO.setNumberOfChildren(numberOfChildren);
+        responseDTO.setNumberOfAdults(numberOfAdults);
+
+        return responseDTO;
+    }
+
+    private Set<PersonInfoDTO> mapToPersonInfoDTOSet(List<Person> personsCovered) {
+        return personsCovered.stream()
+            .map(person -> {
+                PersonInfoDTO infoDTO = new PersonInfoDTO();
+                infoDTO.setFirstName(person.getFirstName());
+                infoDTO.setLastName(person.getLastName());
+                infoDTO.setAddress(person.getAddress());
+                infoDTO.setPhone(person.getPhone());
+                return infoDTO;
+            })
+            .collect(Collectors.toSet());
+    }
+
+    private int countChildren(List<Person> persons) {
+        return (int) persons.stream()
+            .filter(person -> {
+                String birthdate = medicalRecordService
+                    .getMedicalRecordByPerson(person.getFirstName(), person.getLastName())
+                    .getBirthdate();
+                return medicalRecordService.isChild(birthdate);
+            })
+            .count();
+    }
+
 }
