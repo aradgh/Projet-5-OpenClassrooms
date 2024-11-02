@@ -101,7 +101,6 @@ public class MedicalRecordService {
         return calculateAge(birthdate) <= 18;
     }
 
-    // Méthode pour récupérer les antécédents médicaux d'une personne
     public MedicalRecord getMedicalRecordByPerson(String firstName, String lastName) {
         return medicalRecordRepository.findByFirstNameAndLastName(firstName, lastName);
     }
