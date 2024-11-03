@@ -4,8 +4,11 @@ import com.safetynet.alerts.model.Person;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import static com.safetynet.alerts.repository.Data.persons;
 import static com.safetynet.alerts.repository.JsonFileUtil.saveData;
@@ -53,6 +56,12 @@ public class PersonRepository {
     public List<Person> findByCity(String city) {
         return persons.stream()
             .filter(person -> person.getCity().equals(city))
+            .toList();
+    }
+
+    public Collection<Person> findByAddresses(Set<String> addresses) {
+        return persons.stream()
+            .filter(person -> addresses.contains(person.getAddress()))
             .toList();
     }
 }

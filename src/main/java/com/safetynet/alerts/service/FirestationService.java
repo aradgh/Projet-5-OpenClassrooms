@@ -6,10 +6,7 @@ import com.safetynet.alerts.repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
@@ -115,17 +112,43 @@ public class FirestationService {
         int firestationNumber = firestation.map(Firestation::getStation).orElse(0);
 
         Set<ResidentInfoDTO> residentInfoList = residents.stream()
-            .map(person -> {
-                MedicalRecord medicalRecord = medicalRecordService.getMedicalRecordByPerson(person.getFirstName(), person.getLastName());
-                int age = medicalRecord != null ? medicalRecordService.calculateAge(medicalRecord.getBirthdate()) : 0;
-                List<String> medications = medicalRecord != null ? medicalRecord.getMedications() : List.of();
-                List<String> allergies = medicalRecord != null ? medicalRecord.getAllergies() : List.of();
-
-                return new ResidentInfoDTO(person.getLastName(), person.getPhone(), age, medications, allergies);
-            })
+            .map(this::getResidentInfoDTO)
             .collect(Collectors.toSet());
 
         return new FireAlertDTO(firestationNumber, residentInfoList);
+    }
+
+    public List<FloodStationDTO> getHouseholdsByStations(Set<Integer> stationNumbers) {
+        // Récupérer les adresses desservies par les casernes spécifiées
+        List<Firestation> firestations = firestationRepository.findByStations(stationNumbers);
+        Set<String> addresses = firestations.stream()
+            .map(Firestation::getAddress)
+            .collect(Collectors.toSet());
+
+        // Récupérer les résidents par adresse
+        Map<String, List<Person>> personsByAddress = personRepository.findByAddresses(addresses).stream()
+            .collect(Collectors.groupingBy(Person::getAddress));
+
+        // Construire la liste de FloodStationDTO
+        return personsByAddress.entrySet().stream()
+            .map(entry -> {
+                String address = entry.getKey();
+                Set<ResidentInfoDTO> residentInfoList = entry.getValue().stream()
+                    .map(this::getResidentInfoDTO)
+                    .collect(Collectors.toSet());
+
+                return new FloodStationDTO(address, residentInfoList);
+            })
+            .toList();
+    }
+
+    private ResidentInfoDTO getResidentInfoDTO(Person person) {
+        MedicalRecord medicalRecord = medicalRecordService.getMedicalRecordByPerson(person.getFirstName(), person.getLastName());
+        int age = medicalRecord != null ? medicalRecordService.calculateAge(medicalRecord.getBirthdate()) : 0;
+        List<String> medications = medicalRecord != null ? medicalRecord.getMedications() : List.of();
+        List<String> allergies = medicalRecord != null ? medicalRecord.getAllergies() : List.of();
+
+        return new ResidentInfoDTO(person.getLastName(), person.getPhone(), age, medications, allergies);
     }
 
 }

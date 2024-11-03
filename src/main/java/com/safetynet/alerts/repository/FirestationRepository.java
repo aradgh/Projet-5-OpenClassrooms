@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 import static com.safetynet.alerts.repository.Data.firestations;
@@ -55,5 +56,11 @@ public class FirestationRepository {
         return firestations.stream()
             .filter(firestation -> firestation.getAddress().equals(address))
             .findFirst();
+    }
+
+    public List<Firestation> findByStations(Set<Integer> stationNumbers) {
+        return firestations.stream()
+            .filter(firestation -> stationNumbers.contains(firestation.getStation()))
+            .toList();
     }
 }

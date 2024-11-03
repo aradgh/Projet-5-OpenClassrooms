@@ -3,13 +3,17 @@ package com.safetynet.alerts.controller;
 import com.safetynet.alerts.model.FireAlertDTO;
 import com.safetynet.alerts.model.Firestation;
 import com.safetynet.alerts.model.FirestationCoverageDTO;
+import com.safetynet.alerts.model.FloodStationDTO;
 import com.safetynet.alerts.service.FirestationService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @RestController
 public class FirestationController {
@@ -60,5 +64,20 @@ public class FirestationController {
         }
 
         return ResponseEntity.status(HttpStatus.OK).body(fireAlertDTO.toString());
+    }
+
+    @GetMapping("/flood/stations")
+    public ResponseEntity<String> getFloodStations(@RequestParam Set<Integer> stations) {
+        List<FloodStationDTO> households = firestationService.getHouseholdsByStations(stations);
+
+        if (households.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.OK).body("No households found for the specified stations.");
+        }
+
+        String result = households.stream()
+            .map(FloodStationDTO::toString)
+            .collect(Collectors.joining("\n"));
+
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 }
