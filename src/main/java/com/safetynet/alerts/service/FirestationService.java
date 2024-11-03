@@ -1,10 +1,8 @@
 package com.safetynet.alerts.service;
 
-import com.safetynet.alerts.model.Firestation;
-import com.safetynet.alerts.model.FirestationCoverageDTO;
-import com.safetynet.alerts.model.Person;
-import com.safetynet.alerts.model.PersonInfoDTO;
+import com.safetynet.alerts.model.*;
 import com.safetynet.alerts.repository.FirestationRepository;
+import com.safetynet.alerts.repository.PersonRepository;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -18,13 +16,16 @@ import java.util.stream.Collectors;
 public class FirestationService {
     private final FirestationRepository firestationRepository;
     private final PersonService personService;
+    private final PersonRepository personRepository;
     private final MedicalRecordService medicalRecordService;
 
     public FirestationService(FirestationRepository firestationRepository, PersonService personService,
+                              PersonRepository personRepository,
                               MedicalRecordService medicalRecordService
     ) {
         this.firestationRepository = firestationRepository;
         this.personService = personService;
+        this.personRepository = personRepository;
         this.medicalRecordService = medicalRecordService;
     }
 
@@ -105,6 +106,26 @@ public class FirestationService {
         return (int) persons.stream()
             .filter(medicalRecordService::isChild)
             .count();
+    }
+
+    public FireAlertDTO getResidentsByAddress(String address) {
+        List<Person> residents = personRepository.findByAddress(address);
+
+        Optional<Firestation> firestation = firestationRepository.findByAddress(address);
+        int firestationNumber = firestation.map(Firestation::getStation).orElse(0);
+
+        Set<ResidentInfoDTO> residentInfoList = residents.stream()
+            .map(person -> {
+                MedicalRecord medicalRecord = medicalRecordService.getMedicalRecordByPerson(person.getFirstName(), person.getLastName());
+                int age = medicalRecord != null ? medicalRecordService.calculateAge(medicalRecord.getBirthdate()) : 0;
+                List<String> medications = medicalRecord != null ? medicalRecord.getMedications() : List.of();
+                List<String> allergies = medicalRecord != null ? medicalRecord.getAllergies() : List.of();
+
+                return new ResidentInfoDTO(person.getLastName(), person.getPhone(), age, medications, allergies);
+            })
+            .collect(Collectors.toSet());
+
+        return new FireAlertDTO(firestationNumber, residentInfoList);
     }
 
 }

@@ -121,7 +121,7 @@ public class PersonService {
     }
 
     public Set<ChildAlertDTO> getChildrenByAddress(String address) {
-        List<Person> personsAtAddress = getPersonsByAddress(address);
+        List<Person> personsAtAddress = personRepository.findByAddress(address);
 
         return personsAtAddress.stream()
             .filter(medicalRecordService::isChild)
@@ -155,10 +155,6 @@ public class PersonService {
         personInfoDTO.setAddress(person.getAddress());
         personInfoDTO.setPhone(person.getPhone());
         return personInfoDTO;
-    }
-
-    public List<Person> getPersonsByAddress(String address) {
-        return personRepository.findByAddress(address);
     }
 
     public Set<String> getPhoneNumbersByFirestation(int stationNumber) {
