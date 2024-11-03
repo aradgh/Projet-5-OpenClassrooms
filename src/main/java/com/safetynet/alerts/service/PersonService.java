@@ -162,6 +162,29 @@ public class PersonService {
         return persons.stream().map(Person::getPhone).collect(Collectors.toSet());
     }
 
+    public List<PersonInfoLastNameDTO> getPersonsInfoByLastName(String lastName) {
+        List<Person> persons = personRepository.findByLastName(lastName);
+        FirestationService firestationService = new FirestationService(firestationRepository,
+            this,
+            personRepository,
+            medicalRecordService);
+
+        return persons.stream()
+            .map(person -> {
+                ResidentInfoDTO residentInfoDTO = firestationService.createResidentInfoDTO(person);
+
+                return new PersonInfoLastNameDTO(
+                    residentInfoDTO.getLastName(),
+                    person.getAddress(),
+                    residentInfoDTO.getAge(),
+                    person.getEmail(),
+                    residentInfoDTO.getMedications(),
+                    residentInfoDTO.getAllergies()
+                );
+            })
+            .toList();
+    }
+
     public Set<String> getEmailsByCity(String city) {
         List<Person> persons = personRepository.findByCity(city);
         return persons.stream().map(Person::getEmail).collect(Collectors.toSet());

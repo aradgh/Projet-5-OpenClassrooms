@@ -64,4 +64,10 @@ public class PersonRepository {
             .filter(person -> addresses.contains(person.getAddress()))
             .toList();
     }
+
+    public List<Person> findByLastName(String lastName) {
+        return persons.stream()
+            .filter(person -> person.getLastName().equals(lastName))
+            .toList();
+    }
 }

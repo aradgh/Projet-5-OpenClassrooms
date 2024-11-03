@@ -2,12 +2,14 @@ package com.safetynet.alerts.controller;
 
 import com.safetynet.alerts.model.ChildAlertDTO;
 import com.safetynet.alerts.model.Person;
+import com.safetynet.alerts.model.PersonInfoLastNameDTO;
 import com.safetynet.alerts.service.PersonService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -70,5 +72,20 @@ public class PersonController {
         }
 
         return ResponseEntity.status(HttpStatus.OK).body(phoneNumbers.toString());
+    }
+
+    @GetMapping("/personInfo")
+    public ResponseEntity<String> getPersonInfoByLastName(@RequestParam String lastName) {
+        List<PersonInfoLastNameDTO> personsInfo = personService.getPersonsInfoByLastName(lastName);
+
+        if (personsInfo.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.OK).body("No persons found with the last name " + lastName);
+        }
+
+        String result = personsInfo.stream()
+            .map(PersonInfoLastNameDTO::toString)
+            .collect(Collectors.joining("\n"));
+
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 }
