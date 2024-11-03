@@ -71,7 +71,9 @@ public class PersonController {
             return ResponseEntity.status(HttpStatus.OK).body("No phone numbers found for the specified firestation.");
         }
 
-        return ResponseEntity.status(HttpStatus.OK).body(phoneNumbers.toString());
+        String result = String.join("\n", phoneNumbers);
+
+        return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
     @GetMapping("/personInfo")
@@ -85,6 +87,19 @@ public class PersonController {
         String result = personsInfo.stream()
             .map(PersonInfoLastNameDTO::toString)
             .collect(Collectors.joining("\n"));
+
+        return ResponseEntity.status(HttpStatus.OK).body(result);
+    }
+
+    @GetMapping("/communityEmail")
+    public ResponseEntity<String> getCommunityEmailsByCity(@RequestParam String city) {
+        Set<String> emails = personService.getEmailsByCity(city);
+
+        if (emails.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.OK).body("No email addresses found for the specified city.");
+        }
+
+        String result = String.join("\n", emails);
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }

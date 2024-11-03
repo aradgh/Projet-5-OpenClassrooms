@@ -187,6 +187,9 @@ public class PersonService {
 
     public Set<String> getEmailsByCity(String city) {
         List<Person> persons = personRepository.findByCity(city);
-        return persons.stream().map(Person::getEmail).collect(Collectors.toSet());
+        return persons.stream()
+            .map(Person::getEmail)
+            .filter(email -> email != null && !email.isEmpty())
+            .collect(Collectors.toSet());
     }
 }
