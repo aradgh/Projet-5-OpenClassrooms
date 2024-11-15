@@ -7,10 +7,6 @@ public class PersonInfoDTO {
     private String address;
     private String phone;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -29,10 +25,6 @@ public class PersonInfoDTO {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getPhone() {
-        return phone;
     }
 
     public void setPhone(String phone) {

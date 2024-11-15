@@ -1,13 +1,12 @@
 package com.safetynet.alerts.model;
 
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class FloodStationDTO {
 
     private String address;
-    private Set<ResidentInfoDTO> residents;
+    private final Set<ResidentInfoDTO> residents;
 
     public FloodStationDTO(String address, Set<ResidentInfoDTO> residents) {
         this.address = address;
@@ -20,14 +19,6 @@ public class FloodStationDTO {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public Set<ResidentInfoDTO> getResidents() {
-        return residents;
-    }
-
-    public void setResidents(Set<ResidentInfoDTO> residents) {
-        this.residents = residents;
     }
 
     @Override

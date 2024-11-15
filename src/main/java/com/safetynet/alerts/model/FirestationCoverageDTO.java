@@ -8,24 +8,12 @@ public class FirestationCoverageDTO {
     private int numberOfAdults;
     private int numberOfChildren;
 
-    public Set<PersonInfoDTO> getPersons() {
-        return persons;
-    }
-
     public void setPersons(Set<PersonInfoDTO> persons) {
         this.persons = persons;
     }
 
-    public int getNumberOfAdults() {
-        return numberOfAdults;
-    }
-
     public void setNumberOfAdults(int numberOfAdults) {
         this.numberOfAdults = numberOfAdults;
-    }
-
-    public int getNumberOfChildren() {
-        return numberOfChildren;
     }
 
     public void setNumberOfChildren(int numberOfChildren) {

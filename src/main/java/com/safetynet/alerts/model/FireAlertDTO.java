@@ -5,28 +5,16 @@ import java.util.stream.Collectors;
 
 public class FireAlertDTO {
 
-    private int firestationNumber;
-    private Set<ResidentInfoDTO> residents;
+    private final int firestationNumber;
+    private final Set<ResidentInfoDTO> residents;
 
     public FireAlertDTO(int firestationNumber, Set<ResidentInfoDTO> residents) {
         this.firestationNumber = firestationNumber;
         this.residents = residents;
     }
 
-    public int getFirestationNumber() {
-        return firestationNumber;
-    }
-
-    public void setFirestationNumber(int firestationNumber) {
-        this.firestationNumber = firestationNumber;
-    }
-
     public Set<ResidentInfoDTO> getResidents() {
         return residents;
-    }
-
-    public void setResidents(Set<ResidentInfoDTO> residents) {
-        this.residents = residents;
     }
 
     @Override

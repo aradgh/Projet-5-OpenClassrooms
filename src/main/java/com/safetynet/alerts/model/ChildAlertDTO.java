@@ -10,10 +10,6 @@ public class ChildAlertDTO {
     private int age;
     private Set<PersonInfoDTO> householdMembers;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -26,16 +22,8 @@ public class ChildAlertDTO {
         this.lastName = lastName;
     }
 
-    public int getAge() {
-        return age;
-    }
-
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Set<PersonInfoDTO> getHouseholdMembers() {
-        return householdMembers;
     }
 
     public void setHouseholdMembers(Set<PersonInfoDTO> householdMembers) {

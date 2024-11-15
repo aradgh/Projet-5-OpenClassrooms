@@ -111,24 +111,42 @@ public class MedicalRecordService {
     private boolean updateFieldsIfNecessary(MedicalRecord existingRecord, MedicalRecord newRecord) {
         boolean isUpdated = false;
 
+        // Update firstName if necessary
+        if (!existingRecord.getFirstName().equals(newRecord.getFirstName())) {
+            logger.debug("Updating firstName from {} to {}", existingRecord.getFirstName(), newRecord.getFirstName());
+            existingRecord.setFirstName(newRecord.getFirstName());
+            isUpdated = true;
+        }
+
+        // Update lastName if necessary
+        if (!existingRecord.getLastName().equals(newRecord.getLastName())) {
+            logger.debug("Updating lastName from {} to {}", existingRecord.getLastName(), newRecord.getLastName());
+            existingRecord.setLastName(newRecord.getLastName());
+            isUpdated = true;
+        }
+
+        // Update medications if necessary
         if (!existingRecord.getMedications().equals(newRecord.getMedications())) {
             logger.debug("Updating medications from {} to {}", existingRecord.getMedications(), newRecord.getMedications());
             existingRecord.setMedications(newRecord.getMedications());
             isUpdated = true;
         }
 
+        // Update allergies if necessary
         if (!existingRecord.getAllergies().equals(newRecord.getAllergies())) {
             logger.debug("Updating allergies from {} to {}", existingRecord.getAllergies(), newRecord.getAllergies());
             existingRecord.setAllergies(newRecord.getAllergies());
             isUpdated = true;
         }
 
+        // Update birthdate if necessary
         if (!existingRecord.getBirthdate().equals(newRecord.getBirthdate())) {
             logger.debug("Updating birthdate from {} to {}", existingRecord.getBirthdate(), newRecord.getBirthdate());
             existingRecord.setBirthdate(newRecord.getBirthdate());
             isUpdated = true;
         }
 
+        // Log result
         if (isUpdated) {
             logger.info("Medical record updated: {}", existingRecord);
         } else {
