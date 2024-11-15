@@ -1,12 +1,16 @@
 package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.MedicalRecord;
+import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.MedicalRecordRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -97,6 +101,13 @@ public class MedicalRecordService {
         });
     }
 
+    /**
+     * Updates the fields of an existing medical record if they differ from the new record.
+     *
+     * @param existingRecord The current medical record.
+     * @param newRecord      The new medical record with updated data.
+     * @return True if any field was updated, false otherwise.
+     */
     private boolean updateFieldsIfNecessary(MedicalRecord existingRecord, MedicalRecord newRecord) {
         boolean isUpdated = false;
 
@@ -116,6 +127,12 @@ public class MedicalRecordService {
             logger.debug("Updating birthdate from {} to {}", existingRecord.getBirthdate(), newRecord.getBirthdate());
             existingRecord.setBirthdate(newRecord.getBirthdate());
             isUpdated = true;
+        }
+
+        if (isUpdated) {
+            logger.info("Medical record updated: {}", existingRecord);
+        } else {
+            logger.debug("No fields were updated for medical record: {}", existingRecord);
         }
 
         return isUpdated;
@@ -138,4 +155,61 @@ public class MedicalRecordService {
         }
         return deleted;
     }
+
+    /**
+     * Calculates the age of a person based on their birthdate.
+     *
+     * @param birthdate The birthdate in "MM/dd/yyyy" format.
+     * @return The calculated age.
+     */
+    public int calculateAge(String birthdate) {
+        logger.debug("Calculating age for birthdate: {}", birthdate);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        LocalDate birthDate = LocalDate.parse(birthdate, formatter);
+        int age = Period.between(birthDate, LocalDate.now()).getYears();
+
+        logger.debug("Calculated age: {}", age);
+        return age;
+    }
+
+    /**
+     * Determines if a given person is a child (age <= 18).
+     *
+     * @param person The person to check.
+     * @return True if the person is a child, false otherwise.
+     */
+    public boolean isChild(Person person) {
+        logger.debug("Checking if person is a child: {}", person);
+
+        MedicalRecord personRecord = getMedicalRecordByPerson(person.getFirstName(), person.getLastName());
+        if (personRecord == null) {
+            logger.error("No medical record found for person: {}", person);
+            return false;
+        }
+
+        boolean isChild = calculateAge(personRecord.getBirthdate()) <= 18;
+        logger.debug("Person {} is a child: {}", person.getFirstName(), isChild);
+        return isChild;
+    }
+
+    /**
+     * Retrieves a medical record for a given person based on their first and last name.
+     *
+     * @param firstName The first name of the person.
+     * @param lastName  The last name of the person.
+     * @return The medical record if found, or null otherwise.
+     */
+    public MedicalRecord getMedicalRecordByPerson(String firstName, String lastName) {
+        logger.info("Retrieving medical record for person: {} {}", firstName, lastName);
+
+        MedicalRecord record = medicalRecordRepository.findByFirstNameAndLastName(firstName, lastName);
+        if (record != null) {
+            logger.info("Medical record found: {}", record);
+        } else {
+            logger.error("No medical record found for person: {} {}", firstName, lastName);
+        }
+        return record;
+    }
+
 }

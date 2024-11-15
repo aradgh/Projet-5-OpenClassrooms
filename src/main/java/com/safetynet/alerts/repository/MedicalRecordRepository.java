@@ -111,4 +111,29 @@ public class MedicalRecordRepository {
             return false;
         }
     }
+
+    /**
+     * Finds a medical record by the given first and last name.
+     *
+     * @param firstName The first name of the person.
+     * @param lastName  The last name of the person.
+     * @return The medical record if found, or null otherwise.
+     */
+    public MedicalRecord findByFirstNameAndLastName(String firstName, String lastName) {
+        logger.info("Searching for medical record with firstName={} and lastName={}", firstName, lastName);
+
+        MedicalRecord medicalRecord = medicalrecords.stream()
+            .filter(record -> record.getFirstName().equals(firstName) && record.getLastName().equals(lastName))
+            .findFirst()
+            .orElse(null);
+
+        if (medicalRecord != null) {
+            logger.info("Medical record found: {}", medicalRecord);
+        } else {
+            logger.error("No medical record found for firstName={} and lastName={}", firstName, lastName);
+        }
+
+        return medicalRecord;
+    }
+
 }

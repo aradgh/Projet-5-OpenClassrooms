@@ -135,9 +135,16 @@ public class FirestationService {
         return responseDTO;
     }
 
+    /**
+     * Maps a list of persons to a set of PersonInfoDTO objects.
+     *
+     * @param personsCovered The list of persons to map.
+     * @return A set of PersonInfoDTO objects.
+     */
     private Set<PersonInfoDTO> mapToPersonInfoDTOSet(List<Person> personsCovered) {
         logger.debug("Mapping {} persons to PersonInfoDTO", personsCovered.size());
-        return personsCovered.stream()
+
+        Set<PersonInfoDTO> personInfoDTOSet = personsCovered.stream()
             .map(person -> {
                 PersonInfoDTO infoDTO = new PersonInfoDTO();
                 infoDTO.setFirstName(person.getFirstName());
@@ -147,13 +154,26 @@ public class FirestationService {
                 return infoDTO;
             })
             .collect(Collectors.toSet());
+
+        logger.debug("Successfully mapped {} persons to PersonInfoDTO.", personInfoDTOSet.size());
+        return personInfoDTOSet;
     }
 
+    /**
+     * Counts the number of children (age <= 18) in a list of persons.
+     *
+     * @param persons The list of persons to filter.
+     * @return The count of children.
+     */
     private int countChildren(List<Person> persons) {
         logger.debug("Counting children from a list of {} persons", persons.size());
-        return (int) persons.stream()
+
+        int numberOfChildren = (int) persons.stream()
             .filter(medicalRecordService::isChild)
             .count();
+
+        logger.debug("Number of children counted: {}", numberOfChildren);
+        return numberOfChildren;
     }
 
     /**
@@ -179,16 +199,28 @@ public class FirestationService {
         return fireAlertDTO;
     }
 
+    /**
+     * Retrieves households covered by the specified firestations.
+     *
+     * @param stationNumbers The set of station numbers.
+     * @return A list of FloodStationDTO objects containing households and their residents.
+     */
     public List<FloodStationDTO> getHouseholdsByStations(Set<Integer> stationNumbers) {
+        logger.info("Fetching households for firestation numbers: {}", stationNumbers);
+
         List<Firestation> firestations = firestationRepository.findByStations(stationNumbers);
+        logger.debug("Found {} firestations for the given station numbers.", firestations.size());
+
         Set<String> addresses = firestations.stream()
             .map(Firestation::getAddress)
             .collect(Collectors.toSet());
+        logger.debug("Addresses extracted from firestations: {}", addresses);
 
         Map<String, List<Person>> personsByAddress = personRepository.findByAddresses(addresses).stream()
             .collect(Collectors.groupingBy(Person::getAddress));
+        logger.debug("Grouped {} persons by address.", personsByAddress.size());
 
-        return personsByAddress.entrySet().stream()
+        List<FloodStationDTO> households = personsByAddress.entrySet().stream()
             .map(entry -> {
                 String address = entry.getKey();
                 Set<ResidentInfoDTO> residentInfoList = entry.getValue().stream()
@@ -198,15 +230,28 @@ public class FirestationService {
                 return new FloodStationDTO(address, residentInfoList);
             })
             .toList();
+
+        logger.info("Successfully retrieved {} households for the specified stations.", households.size());
+        return households;
     }
 
+    /**
+     * Creates a ResidentInfoDTO from a Person object, including medical information.
+     *
+     * @param person The person to transform.
+     * @return A ResidentInfoDTO containing the person's details and medical information.
+     */
     ResidentInfoDTO createResidentInfoDTO(Person person) {
+        logger.debug("Creating ResidentInfoDTO for person: {}", person);
+
         MedicalRecord medicalRecord = medicalRecordService.getMedicalRecordByPerson(person.getFirstName(), person.getLastName());
         int age = medicalRecord != null ? medicalRecordService.calculateAge(medicalRecord.getBirthdate()) : 0;
         List<String> medications = medicalRecord != null ? medicalRecord.getMedications() : List.of();
         List<String> allergies = medicalRecord != null ? medicalRecord.getAllergies() : List.of();
 
-        return new ResidentInfoDTO(person.getLastName(), person.getPhone(), age, medications, allergies);
-    }
+        ResidentInfoDTO residentInfoDTO = new ResidentInfoDTO(person.getLastName(), person.getPhone(), age, medications, allergies);
+        logger.debug("Created ResidentInfoDTO: {}", residentInfoDTO);
 
+        return residentInfoDTO;
+    }
 }
