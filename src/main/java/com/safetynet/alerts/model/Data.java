@@ -1,9 +1,6 @@
-package com.safetynet.alerts.repository;
+package com.safetynet.alerts.model;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.safetynet.alerts.model.Firestation;
-import com.safetynet.alerts.model.MedicalRecord;
-import com.safetynet.alerts.model.Person;
 
 import java.util.List;
 

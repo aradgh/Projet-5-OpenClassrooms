@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-import static com.safetynet.alerts.repository.Data.medicalrecords;
+import static com.safetynet.alerts.model.Data.medicalrecords;
 import static com.safetynet.alerts.repository.JsonFileUtil.saveData;
 
 /**

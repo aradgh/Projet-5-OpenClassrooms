@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
-import static com.safetynet.alerts.repository.Data.persons;
+import static com.safetynet.alerts.model.Data.persons;
 import static com.safetynet.alerts.repository.JsonFileUtil.saveData;
 
 /**
