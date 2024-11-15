@@ -1,110 +1,141 @@
 package com.safetynet.alerts.service;
 
 import com.safetynet.alerts.model.MedicalRecord;
-import com.safetynet.alerts.model.Person;
 import com.safetynet.alerts.repository.MedicalRecordRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+/**
+ * Service class for managing MedicalRecord operations.
+ * Handles business logic related to adding, updating, deleting, and retrieving medical records.
+ */
 @Service
 public class MedicalRecordService {
+
+    private static final Logger logger = LogManager.getLogger(MedicalRecordService.class);
+
     private final MedicalRecordRepository medicalRecordRepository;
 
     public MedicalRecordService(MedicalRecordRepository medicalRecordRepository) {
         this.medicalRecordRepository = medicalRecordRepository;
     }
 
-    public void addMedicalRecord(MedicalRecord medicalRecord) throws IOException {
-        medicalRecordRepository.addMedicalRecord(medicalRecord);
+    /**
+     * Retrieves all medical records.
+     *
+     * @return List of all medical records.
+     */
+    public List<MedicalRecord> findAll() {
+        logger.info("Retrieving all medical records.");
+        List<MedicalRecord> records = medicalRecordRepository.findAll();
+        logger.debug("Retrieved {} medical records.", records.size());
+        return records;
     }
 
-    public boolean updateMedicalRecord(MedicalRecord medicalRecordToUpdate) {
-        Optional<MedicalRecord> existingMedicalRecordOpt = Optional.ofNullable(
-            medicalRecordRepository.findById(medicalRecordToUpdate.getId()));
+    /**
+     * Retrieves a medical record by its ID.
+     *
+     * @param id The UUID of the medical record.
+     * @return The medical record if found, or null otherwise.
+     */
+    public MedicalRecord findById(UUID id) {
+        logger.info("Searching for medical record with ID: {}", id);
+        MedicalRecord record = medicalRecordRepository.findById(id);
+        if (record != null) {
+            logger.info("Medical record found: {}", record);
+        } else {
+            logger.error("No medical record found with ID: {}", id);
+        }
+        return record;
+    }
 
-        return existingMedicalRecordOpt.map(existingMedicalRecord -> {
-            boolean isUpdated = updateFirstNameIfNecessary(existingMedicalRecord, medicalRecordToUpdate.getFirstName());
-            isUpdated |= updateLastNameIfNecessary(existingMedicalRecord, medicalRecordToUpdate.getLastName());
-            isUpdated |= updateBirthdateIfNecessary(existingMedicalRecord, medicalRecordToUpdate.getBirthdate());
-            isUpdated |= updateMedicationsIfNecessary(existingMedicalRecord, medicalRecordToUpdate.getMedications());
-            isUpdated |= updateAllergiesIfNecessary(existingMedicalRecord, medicalRecordToUpdate.getAllergies());
+    /**
+     * Adds a new medical record.
+     *
+     * @param medicalRecord The medical record to add.
+     * @throws IOException if an error occurs during data persistence.
+     */
+    public void addMedicalRecord(MedicalRecord medicalRecord) throws IOException {
+        logger.info("Adding medical record: {}", medicalRecord);
+        medicalRecordRepository.addMedicalRecord(medicalRecord);
+        logger.info("Medical record added successfully.");
+    }
 
+    /**
+     * Updates an existing medical record.
+     *
+     * @param medicalRecord The medical record to update.
+     * @return True if the medical record was updated, false otherwise.
+     */
+    public boolean updateMedicalRecord(MedicalRecord medicalRecord) {
+        logger.info("Updating medical record: {}", medicalRecord);
+        Optional<MedicalRecord> existingRecordOpt = Optional.ofNullable(medicalRecordRepository.findById(medicalRecord.getId()));
+
+        return existingRecordOpt.map(existingRecord -> {
+            boolean isUpdated = updateFieldsIfNecessary(existingRecord, medicalRecord);
             if (isUpdated) {
                 try {
-                    medicalRecordRepository.updateMedicalRecord(existingMedicalRecord);
+                    medicalRecordRepository.updateMedicalRecord(existingRecord);
+                    logger.info("Medical record updated successfully: {}", existingRecord);
                 } catch (IOException e) {
+                    logger.error("Error while updating medical record: {}", medicalRecord, e);
                     throw new RuntimeException(e);
                 }
+            } else {
+                logger.debug("No changes detected for medical record: {}", medicalRecord);
             }
-
             return isUpdated;
-        }).orElse(false);
+        }).orElseGet(() -> {
+            logger.error("Medical record not found for update: {}", medicalRecord.getId());
+            return false;
+        });
     }
 
-    public boolean deleteMedicalRecord(UUID medicalRecordId) throws IOException {
-        return medicalRecordRepository.deleteMedicalRecord(medicalRecordId);
-    }
+    private boolean updateFieldsIfNecessary(MedicalRecord existingRecord, MedicalRecord newRecord) {
+        boolean isUpdated = false;
 
-    private boolean updateFirstNameIfNecessary(MedicalRecord existingRecord, String newFirstName) {
-        if (newFirstName != null && !newFirstName.isEmpty() && !existingRecord.getFirstName().equals(newFirstName)) {
-            existingRecord.setFirstName(newFirstName);
-            return true;
+        if (!existingRecord.getMedications().equals(newRecord.getMedications())) {
+            logger.debug("Updating medications from {} to {}", existingRecord.getMedications(), newRecord.getMedications());
+            existingRecord.setMedications(newRecord.getMedications());
+            isUpdated = true;
         }
-        return false;
-    }
 
-    private boolean updateLastNameIfNecessary(MedicalRecord existingRecord, String newLastName) {
-        if (newLastName != null && !newLastName.isEmpty() && !existingRecord.getLastName().equals(newLastName)) {
-            existingRecord.setLastName(newLastName);
-            return true;
+        if (!existingRecord.getAllergies().equals(newRecord.getAllergies())) {
+            logger.debug("Updating allergies from {} to {}", existingRecord.getAllergies(), newRecord.getAllergies());
+            existingRecord.setAllergies(newRecord.getAllergies());
+            isUpdated = true;
         }
-        return false;
-    }
 
-    private boolean updateBirthdateIfNecessary(MedicalRecord existingRecord, String newBirthdate) {
-        if (newBirthdate != null && !newBirthdate.isEmpty() && !existingRecord.getBirthdate().equals(newBirthdate)) {
-            existingRecord.setBirthdate(newBirthdate);
-            return true;
+        if (!existingRecord.getBirthdate().equals(newRecord.getBirthdate())) {
+            logger.debug("Updating birthdate from {} to {}", existingRecord.getBirthdate(), newRecord.getBirthdate());
+            existingRecord.setBirthdate(newRecord.getBirthdate());
+            isUpdated = true;
         }
-        return false;
+
+        return isUpdated;
     }
 
-    private boolean updateMedicationsIfNecessary(MedicalRecord existingRecord, List<String> newMedications) {
-        if (newMedications != null && !newMedications.isEmpty() && !existingRecord.getMedications().equals(newMedications)) {
-            existingRecord.setMedications(newMedications);
-            return true;
+    /**
+     * Deletes a medical record by its ID.
+     *
+     * @param id The UUID of the medical record to delete.
+     * @return True if the medical record was deleted, false otherwise.
+     * @throws IOException if an error occurs during data persistence.
+     */
+    public boolean deleteMedicalRecord(UUID id) throws IOException {
+        logger.info("Deleting medical record with ID: {}", id);
+        boolean deleted = medicalRecordRepository.deleteMedicalRecord(id);
+        if (deleted) {
+            logger.info("Medical record deleted successfully: {}", id);
+        } else {
+            logger.error("Medical record not found for deletion: {}", id);
         }
-        return false;
+        return deleted;
     }
-
-    private boolean updateAllergiesIfNecessary(MedicalRecord existingRecord, List<String> newAllergies) {
-        if (newAllergies != null && !newAllergies.isEmpty() && !existingRecord.getAllergies().equals(newAllergies)) {
-            existingRecord.setAllergies(newAllergies);
-            return true;
-        }
-        return false;
-    }
-
-    public int calculateAge(String birthdate) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        LocalDate birthDate = LocalDate.parse(birthdate, formatter);
-        return Period.between(birthDate, LocalDate.now()).getYears();
-    }
-
-    public boolean isChild(Person person) {
-        MedicalRecord personRecord = getMedicalRecordByPerson(person.getFirstName(), person.getLastName());
-        return personRecord != null && calculateAge(personRecord.getBirthdate()) <= 18;
-    }
-
-    public MedicalRecord getMedicalRecordByPerson(String firstName, String lastName) {
-        return medicalRecordRepository.findByFirstNameAndLastName(firstName, lastName);
-    }
-
 }
