@@ -32,15 +32,16 @@ public class ChildAlertDTO {
 
     @Override
     public String toString() {
-        String membersString = householdMembers.stream()
+        String membersString = (householdMembers != null) ? householdMembers.stream()
             .map(PersonInfoDTO::toString)
-            .collect(Collectors.joining(", "));
+            .collect(Collectors.joining(", ")) : "No household members";
 
         return "Child { " +
-               "firstName: '" + firstName + '\'' +
-               ", lastName: '" + lastName + '\'' +
-               ", age: " + age +
-               ", householdMembers: [" + membersString + "]" +
-               " }";
+            "firstName: '" + firstName + '\'' +
+            ", lastName: '" + lastName + '\'' +
+            ", age: " + age +
+            ", householdMembers: [" + membersString + "]" +
+            " }";
     }
+
 }

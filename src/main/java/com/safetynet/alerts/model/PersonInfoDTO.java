@@ -7,6 +7,15 @@ public class PersonInfoDTO {
     private String address;
     private String phone;
 
+    public PersonInfoDTO() {}
+
+    public PersonInfoDTO(String firstName, String lastName, String address, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.phone = phone;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
