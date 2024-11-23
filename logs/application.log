@@ -2086,3 +2086,629 @@ Caused by: com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot
 2024-11-23T16:13:27.511+01:00  INFO 27044 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
 2024-11-23T16:13:27.536+01:00 DEBUG 27044 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@1472208d, started on Sat Nov 23 16:13:20 CET 2024
 2024-11-23T16:13:27.541+01:00 DEBUG 27044 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@491afa9b, started on Sat Nov 23 16:13:26 CET 2024
+2024-11-23T20:01:05.382+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Starting MedicalRecordControllerTests using Java 21.0.1 with PID 35132 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-23T20:01:05.384+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : No active profile set, falling back to 1 default profile: "default"
+2024-11-23T20:01:05.409+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@66238be2
+2024-11-23T20:01:07.260+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-11-23T20:01:07.366+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-23T20:01:07.410+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-23T20:01:07.457+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-23T20:01:07.531+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-23T20:01:07.531+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-23T20:01:07.533+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-11-23T20:01:07.571+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Started MedicalRecordControllerTests in 2.588 seconds (process running for 3.689)
+2024-11-23T20:01:07.580+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-23T20:01:07.594+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-23T20:01:07.707+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-23T20:01:07.739+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-23T20:01:07.739+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-23T20:01:07.739+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-23T20:01:07.857+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:01:07.890+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: 650691f2-d550-4c3c-a002-51eb928c8539
+2024-11-23T20:01:07.897+01:00 ERROR 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record not found for deletion: 650691f2-d550-4c3c-a002-51eb928c8539
+2024-11-23T20:01:07.909+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:07.912+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record not found."]
+2024-11-23T20:01:07.975+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#addMedicalRecord(MedicalRecord)
+2024-11-23T20:01:07.987+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@a9a8ec3]
+2024-11-23T20:01:07.990+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to add medical record: com.safetynet.alerts.model.MedicalRecord@a9a8ec3
+2024-11-23T20:01:07.991+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record added successfully.
+2024-11-23T20:01:07.992+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:07.992+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record added successfully."]
+2024-11-23T20:01:08.002+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-23T20:01:08.003+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@7eee6c13]
+2024-11-23T20:01:08.004+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@7eee6c13
+2024-11-23T20:01:08.004+01:00 ERROR 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record not found for update: 8c61be83-5bd8-4e17-853a-df626be51b58
+2024-11-23T20:01:08.005+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:08.005+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record not found."]
+2024-11-23T20:01:08.014+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-23T20:01:08.015+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@2ae5bd34]
+2024-11-23T20:01:08.016+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@2ae5bd34
+2024-11-23T20:01:08.016+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record updated successfully.
+2024-11-23T20:01:08.016+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:08.017+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record updated successfully."]
+2024-11-23T20:01:08.027+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:01:08.028+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: 26f24755-81d1-485c-bbd6-a815d3e42334
+2024-11-23T20:01:08.029+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record deleted successfully.
+2024-11-23T20:01:08.029+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:08.030+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record deleted successfully."]
+2024-11-23T20:01:08.047+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:01:08.047+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: f1022b87-02cb-46a2-88f8-808d0fc666ff
+2024-11-23T20:01:08.048+01:00 ERROR 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while deleting medical record with ID: f1022b87-02cb-46a2-88f8-808d0fc666ff
+
+java.io.IOException: null
+
+2024-11-23T20:01:08.056+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:08.056+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while deleting the medical record."]
+2024-11-23T20:01:08.066+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#addMedicalRecord(MedicalRecord)
+2024-11-23T20:01:08.067+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@4276ad40]
+2024-11-23T20:01:08.068+01:00  INFO 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to add medical record: com.safetynet.alerts.model.MedicalRecord@4276ad40
+2024-11-23T20:01:08.068+01:00 ERROR 35132 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while adding medical record: com.safetynet.alerts.model.MedicalRecord@4276ad40
+
+java.io.IOException: null
+
+2024-11-23T20:01:08.069+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:08.070+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while adding the medical record."]
+2024-11-23T20:01:08.081+01:00 DEBUG 35132 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@66238be2, started on Sat Nov 23 20:01:05 CET 2024
+2024-11-23T20:01:22.323+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : Starting FirestationControllerTests using Java 21.0.1 with PID 28644 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-23T20:01:22.325+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-11-23T20:01:22.358+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@fbe70d8
+2024-11-23T20:01:25.259+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2024-11-23T20:01:25.399+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-23T20:01:25.454+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-23T20:01:25.542+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-23T20:01:25.644+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-23T20:01:25.645+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-23T20:01:25.647+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-11-23T20:01:25.685+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : Started FirestationControllerTests in 4.153 seconds (process running for 6.232)
+2024-11-23T20:01:25.696+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-23T20:01:25.704+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-23T20:01:25.898+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-23T20:01:25.948+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-23T20:01:25.948+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-23T20:01:25.949+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-23T20:01:26.154+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#updateFirestation(Firestation)
+2024-11-23T20:01:26.219+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@3b4a77be]
+2024-11-23T20:01:26.235+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to update firestation: com.safetynet.alerts.model.Firestation@3b4a77be
+2024-11-23T20:01:26.242+01:00 ERROR 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation not found for update: cffc22a8-8b0a-4d42-8c7d-677a3c9eb3fa
+2024-11-23T20:01:26.258+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.260+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation not found."]
+2024-11-23T20:01:26.308+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#deleteFirestation(UUID)
+2024-11-23T20:01:26.312+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to delete firestation with ID: 7bf3d035-182f-4407-b986-b13cc7fe6209
+2024-11-23T20:01:26.314+01:00 ERROR 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation not found for deletion: 7bf3d035-182f-4407-b986-b13cc7fe6209
+2024-11-23T20:01:26.315+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.315+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation not found."]
+2024-11-23T20:01:26.326+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-23T20:01:26.328+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-23T20:01:26.329+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No residents found at address: 123 Main St
+2024-11-23T20:01:26.329+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.330+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No residents found at the specified address."]
+2024-11-23T20:01:26.338+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#deleteFirestation(UUID)
+2024-11-23T20:01:26.338+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to delete firestation with ID: 6c16f192-fdbc-4b3b-b967-06a74fdb6d62
+2024-11-23T20:01:26.339+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation deleted successfully.
+2024-11-23T20:01:26.340+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.340+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation deleted successfully."]
+2024-11-23T20:01:26.351+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#addFirestation(Firestation)
+2024-11-23T20:01:26.352+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@7262532a]
+2024-11-23T20:01:26.353+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to add a new firestation: com.safetynet.alerts.model.Firestation@7262532a
+2024-11-23T20:01:26.354+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation added successfully.
+2024-11-23T20:01:26.354+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.355+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation added successfully."]
+2024-11-23T20:01:26.364+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFloodStations(Set)
+2024-11-23T20:01:26.365+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve flood station data for stations: [1, 2]
+2024-11-23T20:01:26.373+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved flood station data for stations: [1, 2]
+2024-11-23T20:01:26.374+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.375+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FloodStationDTO { address: '123 Main St', residents: [<EOL>?ResidentInfoDTO { lastName: 'Doe', phone: '1 (truncated)..."]
+2024-11-23T20:01:26.384+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#updateFirestation(Firestation)
+2024-11-23T20:01:26.385+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@4c58212]
+2024-11-23T20:01:26.385+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to update firestation: com.safetynet.alerts.model.Firestation@4c58212
+2024-11-23T20:01:26.387+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation updated successfully.
+2024-11-23T20:01:26.387+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.388+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation updated successfully."]
+2024-11-23T20:01:26.397+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-23T20:01:26.397+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-23T20:01:26.398+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved fire alert for address: 123 Main St
+2024-11-23T20:01:26.399+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.399+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FireAlertDTO { firestationNumber: 0, residents: [<EOL>?ResidentInfoDTO { lastName: 'Doe', phone: '123-45 (truncated)..."]
+2024-11-23T20:01:26.409+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-23T20:01:26.409+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-23T20:01:26.410+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No residents found at address: 123 Main St
+2024-11-23T20:01:26.410+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.410+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No residents found at the specified address."]
+2024-11-23T20:01:26.419+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getPersonsByStation(int)
+2024-11-23T20:01:26.422+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve persons covered by firestation number: 1
+2024-11-23T20:01:26.423+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved firestation coverage: FirestationCoverageDTO {
+  numberOfAdults: 5,
+  numberOfChildren: 2,
+  persons: [
+  ]
+}
+2024-11-23T20:01:26.424+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.424+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FirestationCoverageDTO {<EOL>  numberOfAdults: 5,<EOL>  numberOfChildren: 2,<EOL>  persons: [<EOL>  ]<EOL>}"]
+2024-11-23T20:01:26.434+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFloodStations(Set)
+2024-11-23T20:01:26.435+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve flood station data for stations: [1, 2]
+2024-11-23T20:01:26.435+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No households found for firestations: [1, 2]
+2024-11-23T20:01:26.437+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.438+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No households found for the specified stations."]
+2024-11-23T20:01:26.459+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.MedicalRecordControllerTests]: MedicalRecordControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-23T20:01:26.490+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetyNetAlertsApp for test class com.safetynet.alerts.controller.MedicalRecordControllerTests
+2024-11-23T20:01:26.540+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Starting MedicalRecordControllerTests using Java 21.0.1 with PID 28644 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-23T20:01:26.540+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : No active profile set, falling back to 1 default profile: "default"
+2024-11-23T20:01:26.544+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@303d2485
+2024-11-23T20:01:26.860+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-11-23T20:01:26.894+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-23T20:01:26.899+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-23T20:01:26.903+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-23T20:01:26.916+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-23T20:01:26.916+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-23T20:01:26.917+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-11-23T20:01:26.926+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Started MedicalRecordControllerTests in 0.427 seconds (process running for 7.473)
+2024-11-23T20:01:26.926+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-23T20:01:26.927+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-23T20:01:26.950+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-23T20:01:26.962+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-23T20:01:26.962+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-23T20:01:26.964+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-23T20:01:26.978+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:01:26.980+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: 7cdd70ce-bfae-4d4e-86cb-6082cac4cfaa
+2024-11-23T20:01:26.981+01:00 ERROR 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record not found for deletion: 7cdd70ce-bfae-4d4e-86cb-6082cac4cfaa
+2024-11-23T20:01:26.982+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:26.982+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record not found."]
+2024-11-23T20:01:27.007+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#addMedicalRecord(MedicalRecord)
+2024-11-23T20:01:27.010+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@71e740c6]
+2024-11-23T20:01:27.011+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to add medical record: com.safetynet.alerts.model.MedicalRecord@71e740c6
+2024-11-23T20:01:27.011+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record added successfully.
+2024-11-23T20:01:27.012+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:27.013+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record added successfully."]
+2024-11-23T20:01:27.020+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-23T20:01:27.022+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@2a4137a2]
+2024-11-23T20:01:27.022+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@2a4137a2
+2024-11-23T20:01:27.023+01:00 ERROR 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record not found for update: 2fb2428a-9e87-407e-b8ac-2c47dcc90b8c
+2024-11-23T20:01:27.023+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:27.023+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record not found."]
+2024-11-23T20:01:27.032+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-23T20:01:27.033+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@5a41183b]
+2024-11-23T20:01:27.033+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@5a41183b
+2024-11-23T20:01:27.033+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record updated successfully.
+2024-11-23T20:01:27.035+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:27.035+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record updated successfully."]
+2024-11-23T20:01:27.042+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:01:27.042+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: 56c307ef-0765-4a67-a15f-4b8e8b7caac3
+2024-11-23T20:01:27.043+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record deleted successfully.
+2024-11-23T20:01:27.043+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:27.044+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record deleted successfully."]
+2024-11-23T20:01:27.061+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:01:27.061+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: f94ad575-4248-4c69-b169-b2b06d8b0b7c
+2024-11-23T20:01:27.062+01:00 ERROR 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while deleting medical record with ID: f94ad575-4248-4c69-b169-b2b06d8b0b7c
+
+java.io.IOException: null
+
+2024-11-23T20:01:27.068+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:27.069+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while deleting the medical record."]
+2024-11-23T20:01:27.077+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#addMedicalRecord(MedicalRecord)
+2024-11-23T20:01:27.078+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@7335aae5]
+2024-11-23T20:01:27.079+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to add medical record: com.safetynet.alerts.model.MedicalRecord@7335aae5
+2024-11-23T20:01:27.079+01:00 ERROR 28644 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while adding medical record: com.safetynet.alerts.model.MedicalRecord@7335aae5
+
+java.io.IOException: null
+
+2024-11-23T20:01:27.080+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:01:27.080+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while adding the medical record."]
+2024-11-23T20:01:27.147+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : Starting SafetyNetAlertsAppTests using Java 21.0.1 with PID 28644 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-23T20:01:27.147+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : No active profile set, falling back to 1 default profile: "default"
+2024-11-23T20:01:27.150+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@29e40db1
+2024-11-23T20:01:27.691+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2024-11-23T20:01:27.724+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-23T20:01:27.729+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-23T20:01:27.733+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-23T20:01:27.782+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : Started SafetyNetAlertsAppTests in 0.674 seconds (process running for 8.329)
+2024-11-23T20:01:27.783+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-23T20:01:27.783+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-23T20:01:27.798+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-23T20:01:27.807+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-23T20:01:27.808+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-23T20:01:27.808+01:00  INFO 28644 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-23T20:01:27.833+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@fbe70d8, started on Sat Nov 23 20:01:22 CET 2024
+2024-11-23T20:01:27.837+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@303d2485, started on Sat Nov 23 20:01:26 CET 2024
+2024-11-23T20:01:27.838+01:00 DEBUG 28644 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@29e40db1, started on Sat Nov 23 20:01:27 CET 2024
+2024-11-23T20:04:32.383+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Starting MedicalRecordControllerTests using Java 21.0.1 with PID 35808 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-23T20:04:32.385+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : No active profile set, falling back to 1 default profile: "default"
+2024-11-23T20:04:32.410+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@31500940
+2024-11-23T20:04:34.319+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-11-23T20:04:34.427+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-23T20:04:34.476+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-23T20:04:34.539+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-23T20:04:34.610+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-23T20:04:34.611+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-23T20:04:34.612+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-11-23T20:04:34.652+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Started MedicalRecordControllerTests in 2.677 seconds (process running for 3.755)
+2024-11-23T20:04:34.660+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-23T20:04:34.665+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-23T20:04:34.809+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-23T20:04:34.841+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-23T20:04:34.841+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-23T20:04:34.841+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-23T20:04:34.963+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-23T20:04:35.011+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@2b458cd6]
+2024-11-23T20:04:35.020+01:00  INFO 35808 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@2b458cd6
+2024-11-23T20:04:35.027+01:00 ERROR 35808 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while updating medical record: com.safetynet.alerts.model.MedicalRecord@2b458cd6
+
+java.lang.RuntimeException: Simulated exception
+	at com.safetynet.alerts.service.MedicalRecordService.updateMedicalRecord(MedicalRecordService.java:81) ~[classes/:na]
+	at com.safetynet.alerts.controller.MedicalRecordController.updateMedicalRecord(MedicalRecordController.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.1.8.jar:6.1.8]
+	at com.safetynet.alerts.controller.MedicalRecordControllerTests.testUpdateMedicalRecord_InternalServerError(MedicalRecordControllerTests.java:107) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:63) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) ~[junit-rt.jar:na]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) ~[idea_rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) ~[junit-rt.jar:na]
+
+2024-11-23T20:04:35.047+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:35.048+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while updating the medical record."]
+2024-11-23T20:04:35.094+01:00 DEBUG 35808 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@31500940, started on Sat Nov 23 20:04:32 CET 2024
+2024-11-23T20:04:51.421+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : Starting FirestationControllerTests using Java 21.0.1 with PID 25752 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-23T20:04:51.423+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-11-23T20:04:51.453+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@217dc48e
+2024-11-23T20:04:54.293+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2024-11-23T20:04:54.436+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-23T20:04:54.492+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-23T20:04:54.580+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-23T20:04:54.676+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-23T20:04:54.676+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-23T20:04:54.678+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-11-23T20:04:54.731+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : Started FirestationControllerTests in 4.06 seconds (process running for 6.099)
+2024-11-23T20:04:54.743+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-23T20:04:54.748+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-23T20:04:54.931+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-23T20:04:54.983+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-23T20:04:54.984+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-23T20:04:54.984+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-23T20:04:55.181+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#updateFirestation(Firestation)
+2024-11-23T20:04:55.238+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@b0bd567]
+2024-11-23T20:04:55.256+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to update firestation: com.safetynet.alerts.model.Firestation@b0bd567
+2024-11-23T20:04:55.263+01:00 ERROR 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation not found for update: 1d13f84d-b926-4195-acc9-c5a8ac6dd195
+2024-11-23T20:04:55.276+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.277+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation not found."]
+2024-11-23T20:04:55.324+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#deleteFirestation(UUID)
+2024-11-23T20:04:55.330+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to delete firestation with ID: eeff84eb-1b27-4db5-a3a3-427b06a2526c
+2024-11-23T20:04:55.332+01:00 ERROR 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation not found for deletion: eeff84eb-1b27-4db5-a3a3-427b06a2526c
+2024-11-23T20:04:55.332+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.333+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation not found."]
+2024-11-23T20:04:55.343+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-23T20:04:55.344+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-23T20:04:55.344+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No residents found at address: 123 Main St
+2024-11-23T20:04:55.346+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.346+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No residents found at the specified address."]
+2024-11-23T20:04:55.354+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#deleteFirestation(UUID)
+2024-11-23T20:04:55.355+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to delete firestation with ID: 7937785c-0e41-4daf-af19-fe12c062d6b3
+2024-11-23T20:04:55.355+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation deleted successfully.
+2024-11-23T20:04:55.356+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.356+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation deleted successfully."]
+2024-11-23T20:04:55.367+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#addFirestation(Firestation)
+2024-11-23T20:04:55.368+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@1ba00c0c]
+2024-11-23T20:04:55.369+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to add a new firestation: com.safetynet.alerts.model.Firestation@1ba00c0c
+2024-11-23T20:04:55.370+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation added successfully.
+2024-11-23T20:04:55.371+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.371+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation added successfully."]
+2024-11-23T20:04:55.380+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFloodStations(Set)
+2024-11-23T20:04:55.381+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve flood station data for stations: [1, 2]
+2024-11-23T20:04:55.388+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved flood station data for stations: [1, 2]
+2024-11-23T20:04:55.388+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.389+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FloodStationDTO { address: '123 Main St', residents: [<EOL>?ResidentInfoDTO { lastName: 'Doe', phone: '1 (truncated)..."]
+2024-11-23T20:04:55.398+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#updateFirestation(Firestation)
+2024-11-23T20:04:55.399+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@7d6e2366]
+2024-11-23T20:04:55.399+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to update firestation: com.safetynet.alerts.model.Firestation@7d6e2366
+2024-11-23T20:04:55.400+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation updated successfully.
+2024-11-23T20:04:55.401+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.401+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation updated successfully."]
+2024-11-23T20:04:55.409+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-23T20:04:55.410+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-23T20:04:55.410+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved fire alert for address: 123 Main St
+2024-11-23T20:04:55.411+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.411+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FireAlertDTO { firestationNumber: 0, residents: [<EOL>?ResidentInfoDTO { lastName: 'Doe', phone: '123-45 (truncated)..."]
+2024-11-23T20:04:55.420+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-23T20:04:55.420+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-23T20:04:55.421+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No residents found at address: 123 Main St
+2024-11-23T20:04:55.422+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.422+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No residents found at the specified address."]
+2024-11-23T20:04:55.429+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getPersonsByStation(int)
+2024-11-23T20:04:55.432+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve persons covered by firestation number: 1
+2024-11-23T20:04:55.433+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved firestation coverage: FirestationCoverageDTO {
+  numberOfAdults: 5,
+  numberOfChildren: 2,
+  persons: [
+  ]
+}
+2024-11-23T20:04:55.433+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.433+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FirestationCoverageDTO {<EOL>  numberOfAdults: 5,<EOL>  numberOfChildren: 2,<EOL>  persons: [<EOL>  ]<EOL>}"]
+2024-11-23T20:04:55.443+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFloodStations(Set)
+2024-11-23T20:04:55.443+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve flood station data for stations: [1, 2]
+2024-11-23T20:04:55.444+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No households found for firestations: [1, 2]
+2024-11-23T20:04:55.444+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.445+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No households found for the specified stations."]
+2024-11-23T20:04:55.463+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.MedicalRecordControllerTests]: MedicalRecordControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-23T20:04:55.486+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetyNetAlertsApp for test class com.safetynet.alerts.controller.MedicalRecordControllerTests
+2024-11-23T20:04:55.534+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Starting MedicalRecordControllerTests using Java 21.0.1 with PID 25752 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-23T20:04:55.535+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : No active profile set, falling back to 1 default profile: "default"
+2024-11-23T20:04:55.539+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@45c3cf0c
+2024-11-23T20:04:55.834+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-11-23T20:04:55.865+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-23T20:04:55.870+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-23T20:04:55.875+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-23T20:04:55.886+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-23T20:04:55.887+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-23T20:04:55.887+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-11-23T20:04:55.897+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Started MedicalRecordControllerTests in 0.401 seconds (process running for 7.265)
+2024-11-23T20:04:55.898+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-23T20:04:55.898+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-23T20:04:55.917+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-23T20:04:55.926+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-23T20:04:55.926+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-23T20:04:55.927+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-23T20:04:55.939+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:04:55.941+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: add39185-448a-4494-bca2-5d11846d54e4
+2024-11-23T20:04:55.942+01:00 ERROR 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record not found for deletion: add39185-448a-4494-bca2-5d11846d54e4
+2024-11-23T20:04:55.943+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.944+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record not found."]
+2024-11-23T20:04:55.970+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#addMedicalRecord(MedicalRecord)
+2024-11-23T20:04:55.973+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@798ac54d]
+2024-11-23T20:04:55.974+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to add medical record: com.safetynet.alerts.model.MedicalRecord@798ac54d
+2024-11-23T20:04:55.974+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record added successfully.
+2024-11-23T20:04:55.975+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.975+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record added successfully."]
+2024-11-23T20:04:55.984+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-23T20:04:55.984+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@1acfb04c]
+2024-11-23T20:04:55.985+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@1acfb04c
+2024-11-23T20:04:55.985+01:00 ERROR 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record not found for update: ae66882a-d83b-4634-a026-35a0ea653da4
+2024-11-23T20:04:55.986+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.986+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record not found."]
+2024-11-23T20:04:55.995+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-23T20:04:55.995+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@71e740c6]
+2024-11-23T20:04:55.996+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@71e740c6
+2024-11-23T20:04:55.996+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record updated successfully.
+2024-11-23T20:04:55.997+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:55.997+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record updated successfully."]
+2024-11-23T20:04:56.005+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:04:56.006+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: 25cb5db4-7816-41ad-9dc5-a7c5f5b3c899
+2024-11-23T20:04:56.007+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record deleted successfully.
+2024-11-23T20:04:56.007+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:56.007+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record deleted successfully."]
+2024-11-23T20:04:56.023+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-23T20:04:56.024+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: deae957d-c0c3-4fb7-b1e1-8f318b1e5a09
+2024-11-23T20:04:56.024+01:00 ERROR 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while deleting medical record with ID: deae957d-c0c3-4fb7-b1e1-8f318b1e5a09
+
+java.io.IOException: null
+
+2024-11-23T20:04:56.031+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:56.031+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while deleting the medical record."]
+2024-11-23T20:04:56.038+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#addMedicalRecord(MedicalRecord)
+2024-11-23T20:04:56.040+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@155788a7]
+2024-11-23T20:04:56.040+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to add medical record: com.safetynet.alerts.model.MedicalRecord@155788a7
+2024-11-23T20:04:56.041+01:00 ERROR 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while adding medical record: com.safetynet.alerts.model.MedicalRecord@155788a7
+
+java.io.IOException: null
+
+2024-11-23T20:04:56.041+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:56.042+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while adding the medical record."]
+2024-11-23T20:04:56.052+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-23T20:04:56.052+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@42908ad5]
+2024-11-23T20:04:56.053+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@42908ad5
+2024-11-23T20:04:56.054+01:00 ERROR 25752 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while updating medical record: com.safetynet.alerts.model.MedicalRecord@42908ad5
+
+java.lang.RuntimeException: Simulated exception
+	at com.safetynet.alerts.service.MedicalRecordService.updateMedicalRecord(MedicalRecordService.java:81) ~[classes/:na]
+	at com.safetynet.alerts.controller.MedicalRecordController.updateMedicalRecord(MedicalRecordController.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.1.8.jar:6.1.8]
+	at com.safetynet.alerts.controller.MedicalRecordControllerTests.testUpdateMedicalRecord_InternalServerError(MedicalRecordControllerTests.java:107) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+
+2024-11-23T20:04:56.057+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-23T20:04:56.057+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while updating the medical record."]
+2024-11-23T20:04:56.107+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : Starting SafetyNetAlertsAppTests using Java 21.0.1 with PID 25752 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-23T20:04:56.107+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : No active profile set, falling back to 1 default profile: "default"
+2024-11-23T20:04:56.109+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@47e6004c
+2024-11-23T20:04:56.655+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2024-11-23T20:04:56.684+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-23T20:04:56.690+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-23T20:04:56.693+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-23T20:04:56.735+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : Started SafetyNetAlertsAppTests in 0.653 seconds (process running for 8.103)
+2024-11-23T20:04:56.736+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-23T20:04:56.736+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-23T20:04:56.752+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-23T20:04:56.759+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-23T20:04:56.759+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-23T20:04:56.759+01:00  INFO 25752 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-23T20:04:56.783+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@217dc48e, started on Sat Nov 23 20:04:51 CET 2024
+2024-11-23T20:04:56.787+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@45c3cf0c, started on Sat Nov 23 20:04:55 CET 2024
+2024-11-23T20:04:56.788+01:00 DEBUG 25752 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@47e6004c, started on Sat Nov 23 20:04:56 CET 2024
