@@ -1,10 +1,10 @@
-package com.example.projet_5_openclassrooms;
+package com.safetynet.alerts;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class Projet5OpenClassroomsApplicationTests {
+@SpringBootTest(classes = SafetyNetAlertsApp.class)
+class SafetyNetAlertsAppTests {
 
 	@Test
 	void contextLoads() {
