@@ -113,7 +113,7 @@ public class FirestationController {
         logger.info("Received request to retrieve fire alert for address: {}", address);
         FireAlertDTO fireAlertDTO = firestationService.getResidentsByAddress(address);
 
-        if (fireAlertDTO.getResidents().isEmpty()) {
+        if (fireAlertDTO.getResidents() == null || fireAlertDTO.getResidents().isEmpty()) {
             logger.info("No residents found at address: {}", address);
             return ResponseEntity.status(HttpStatus.OK).body("No residents found at the specified address.");
         }

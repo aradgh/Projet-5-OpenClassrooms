@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class FirestationCoverageDTO {
 
-    private Set<PersonInfoDTO> persons;
+    private Set<PersonInfoDTO> persons = Set.of();
     private int numberOfAdults;
     private int numberOfChildren;
 
@@ -28,12 +28,15 @@ public class FirestationCoverageDTO {
         sb.append("  numberOfChildren: ").append(numberOfChildren).append(",\n");
         sb.append("  persons: [\n");
 
-        for (PersonInfoDTO person : persons) {
-            sb.append("    ").append(person).append(",\n");
+        if (persons != null) {
+            for (PersonInfoDTO person : persons) {
+                sb.append("    ").append(person).append(",\n");
+            }
         }
 
         sb.append("  ]\n");
         sb.append("}");
         return sb.toString();
     }
+
 }

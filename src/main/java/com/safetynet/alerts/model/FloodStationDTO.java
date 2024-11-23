@@ -8,6 +8,11 @@ public class FloodStationDTO {
     private String address;
     private final Set<ResidentInfoDTO> residents;
 
+    public FloodStationDTO() {
+        this.residents = Set.of(); // Collection vide par défaut
+    }
+
+
     public FloodStationDTO(String address, Set<ResidentInfoDTO> residents) {
         this.address = address;
         this.residents = residents;
@@ -23,13 +28,15 @@ public class FloodStationDTO {
 
     @Override
     public String toString() {
-        String residentsString = residents.stream()
+        String residentsString = (residents != null)
+            ? residents.stream()
             .map(ResidentInfoDTO::toString)
-            .collect(Collectors.joining(", "));
+            .collect(Collectors.joining(", "))
+            : "No residents";
 
         return "FloodStationDTO { " +
-               "address: '" + address + '\'' +
-               ", residents: [" + residentsString + "\n]" +
-               " }";
+            "address: '" + address + '\'' +
+            ", residents: [" + residentsString + "\n]" +
+            " }";
     }
 }
