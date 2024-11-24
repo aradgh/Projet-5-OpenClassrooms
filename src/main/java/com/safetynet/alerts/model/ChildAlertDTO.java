@@ -14,6 +14,14 @@ public class ChildAlertDTO {
         this.firstName = firstName;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     public String getLastName() {
         return lastName;
     }

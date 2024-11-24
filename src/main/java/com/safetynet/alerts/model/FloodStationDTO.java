@@ -1,5 +1,7 @@
 package com.safetynet.alerts.model;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -38,5 +40,9 @@ public class FloodStationDTO {
             "address: '" + address + '\'' +
             ", residents: [" + residentsString + "\n]" +
             " }";
+    }
+
+    public Set<ResidentInfoDTO> getResidents() {
+        return residents;
     }
 }

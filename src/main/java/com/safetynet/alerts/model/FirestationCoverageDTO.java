@@ -39,4 +39,11 @@ public class FirestationCoverageDTO {
         return sb.toString();
     }
 
+    public int getNumberOfChildren() {
+        return numberOfChildren;
+    }
+
+    public int getNumberOfAdults() {
+        return numberOfAdults;
+    }
 }
