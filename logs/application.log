@@ -8169,3 +8169,765 @@ java.io.IOException: Simulated IO Exception
 2024-11-24T01:42:08.322+01:00 DEBUG 18304 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@6bd21eb7, started on Sun Nov 24 01:42:06 CET 2024
 2024-11-24T01:42:08.323+01:00 DEBUG 18304 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@3f31ccef, started on Sun Nov 24 01:42:06 CET 2024
 2024-11-24T01:42:08.324+01:00 DEBUG 18304 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@349c9bfa, started on Sun Nov 24 01:42:07 CET 2024
+2024-11-24T01:57:14.098+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : Starting FirestationControllerTests using Java 21.0.1 with PID 29972 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-24T01:57:14.101+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T01:57:14.134+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@26e8ff8c
+2024-11-24T01:57:16.988+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 8 mappings in 'requestMappingHandlerMapping'
+2024-11-24T01:57:17.130+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-24T01:57:17.195+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-24T01:57:17.291+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-24T01:57:17.390+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-24T01:57:17.391+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-24T01:57:17.393+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2024-11-24T01:57:17.431+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.FirestationControllerTests       : Started FirestationControllerTests in 4.075 seconds (process running for 6.158)
+2024-11-24T01:57:17.442+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-24T01:57:17.448+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-24T01:57:17.636+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-24T01:57:17.690+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-24T01:57:17.690+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-24T01:57:17.691+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-24T01:57:17.889+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#updateFirestation(Firestation)
+2024-11-24T01:57:17.952+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@76737130]
+2024-11-24T01:57:17.970+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to update firestation: com.safetynet.alerts.model.Firestation@76737130
+2024-11-24T01:57:17.978+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation not found for update: 9ca93073-6d46-4c49-b884-5eed28aedd1e
+2024-11-24T01:57:17.993+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:17.994+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation not found."]
+2024-11-24T01:57:18.040+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#deleteFirestation(UUID)
+2024-11-24T01:57:18.044+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to delete firestation with ID: f2c502a0-f903-4563-8bb7-f489b0e159cb
+2024-11-24T01:57:18.046+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation not found for deletion: f2c502a0-f903-4563-8bb7-f489b0e159cb
+2024-11-24T01:57:18.047+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.047+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation not found."]
+2024-11-24T01:57:18.056+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-24T01:57:18.058+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-24T01:57:18.058+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No residents found at address: 123 Main St
+2024-11-24T01:57:18.059+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.059+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No residents found at the specified address."]
+2024-11-24T01:57:18.068+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#deleteFirestation(UUID)
+2024-11-24T01:57:18.069+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to delete firestation with ID: a134aa81-2777-4c44-a11a-040596452ece
+2024-11-24T01:57:18.070+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation deleted successfully.
+2024-11-24T01:57:18.070+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.070+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation deleted successfully."]
+2024-11-24T01:57:18.081+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#addFirestation(Firestation)
+2024-11-24T01:57:18.082+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@1847da64]
+2024-11-24T01:57:18.083+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to add a new firestation: com.safetynet.alerts.model.Firestation@1847da64
+2024-11-24T01:57:18.083+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation added successfully.
+2024-11-24T01:57:18.083+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.085+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation added successfully."]
+2024-11-24T01:57:18.092+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFloodStations(Set)
+2024-11-24T01:57:18.095+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve flood station data for stations: [1, 2]
+2024-11-24T01:57:18.101+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved flood station data for stations: [1, 2]
+2024-11-24T01:57:18.102+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.103+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FloodStationDTO { address: '123 Main St', residents: [<EOL>?ResidentInfoDTO { lastName: 'Doe', phone: '1 (truncated)..."]
+2024-11-24T01:57:18.113+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#updateFirestation(Firestation)
+2024-11-24T01:57:18.114+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Firestation@fb79241]
+2024-11-24T01:57:18.115+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to update firestation: com.safetynet.alerts.model.Firestation@fb79241
+2024-11-24T01:57:18.116+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Firestation updated successfully.
+2024-11-24T01:57:18.116+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.116+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Firestation updated successfully."]
+2024-11-24T01:57:18.126+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-24T01:57:18.126+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-24T01:57:18.127+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved fire alert for address: 123 Main St
+2024-11-24T01:57:18.128+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.129+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FireAlertDTO { firestationNumber: 0, residents: [<EOL>?ResidentInfoDTO { lastName: 'Doe', phone: '123-45 (truncated)..."]
+2024-11-24T01:57:18.140+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFireAlertByAddress(String)
+2024-11-24T01:57:18.141+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve fire alert for address: 123 Main St
+2024-11-24T01:57:18.142+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No residents found at address: 123 Main St
+2024-11-24T01:57:18.144+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.144+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No residents found at the specified address."]
+2024-11-24T01:57:18.155+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getPersonsByStation(int)
+2024-11-24T01:57:18.157+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve persons covered by firestation number: 1
+2024-11-24T01:57:18.158+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Successfully retrieved firestation coverage: FirestationCoverageDTO {
+  numberOfAdults: 5,
+  numberOfChildren: 2,
+  persons: [
+  ]
+}
+2024-11-24T01:57:18.159+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.159+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["FirestationCoverageDTO {<EOL>  numberOfAdults: 5,<EOL>  numberOfChildren: 2,<EOL>  persons: [<EOL>  ]<EOL>}"]
+2024-11-24T01:57:18.168+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.FirestationController#getFloodStations(Set)
+2024-11-24T01:57:18.169+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : Received request to retrieve flood station data for stations: [1, 2]
+2024-11-24T01:57:18.170+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.FirestationController   : No households found for firestations: [1, 2]
+2024-11-24T01:57:18.171+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.171+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No households found for the specified stations."]
+2024-11-24T01:57:18.195+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.MedicalRecordControllerTests]: MedicalRecordControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-24T01:57:18.223+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetyNetAlertsApp for test class com.safetynet.alerts.controller.MedicalRecordControllerTests
+2024-11-24T01:57:18.277+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Starting MedicalRecordControllerTests using Java 21.0.1 with PID 29972 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-24T01:57:18.278+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T01:57:18.283+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@18a8a40e
+2024-11-24T01:57:18.612+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-11-24T01:57:18.649+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-24T01:57:18.654+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-24T01:57:18.659+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-24T01:57:18.669+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-24T01:57:18.670+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-24T01:57:18.670+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-11-24T01:57:18.679+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordControllerTests     : Started MedicalRecordControllerTests in 0.445 seconds (process running for 7.406)
+2024-11-24T01:57:18.680+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-24T01:57:18.681+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-24T01:57:18.699+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-24T01:57:18.708+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-24T01:57:18.708+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-24T01:57:18.708+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-24T01:57:18.719+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-24T01:57:18.720+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: d58306db-42af-4a93-b7f8-08539d9eb79d
+2024-11-24T01:57:18.722+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record not found for deletion: d58306db-42af-4a93-b7f8-08539d9eb79d
+2024-11-24T01:57:18.723+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.723+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record not found."]
+2024-11-24T01:57:18.747+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#addMedicalRecord(MedicalRecord)
+2024-11-24T01:57:18.750+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@36821a1b]
+2024-11-24T01:57:18.751+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to add medical record: com.safetynet.alerts.model.MedicalRecord@36821a1b
+2024-11-24T01:57:18.752+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record added successfully.
+2024-11-24T01:57:18.753+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.753+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record added successfully."]
+2024-11-24T01:57:18.761+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-24T01:57:18.762+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@5bb0122]
+2024-11-24T01:57:18.763+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@5bb0122
+2024-11-24T01:57:18.763+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record not found for update: 05363ed2-3eb1-4fde-a6df-96d6dd54759f
+2024-11-24T01:57:18.764+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.764+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record not found."]
+2024-11-24T01:57:18.773+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-24T01:57:18.773+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@2aee0173]
+2024-11-24T01:57:18.774+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@2aee0173
+2024-11-24T01:57:18.774+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record updated successfully.
+2024-11-24T01:57:18.775+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.775+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record updated successfully."]
+2024-11-24T01:57:18.781+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-24T01:57:18.782+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: 3b861a42-f540-4dd4-8335-d4b22c151a2e
+2024-11-24T01:57:18.782+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Medical record deleted successfully.
+2024-11-24T01:57:18.783+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.783+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Medical record deleted successfully."]
+2024-11-24T01:57:18.799+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#deleteMedicalRecord(UUID)
+2024-11-24T01:57:18.799+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to delete medical record with ID: e8e5c200-da4d-4ebe-ad3e-c1dfa7c8b39f
+2024-11-24T01:57:18.800+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while deleting medical record with ID: e8e5c200-da4d-4ebe-ad3e-c1dfa7c8b39f
+
+java.io.IOException: null
+
+2024-11-24T01:57:18.806+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.808+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while deleting the medical record."]
+2024-11-24T01:57:18.815+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#addMedicalRecord(MedicalRecord)
+2024-11-24T01:57:18.816+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@76c5599b]
+2024-11-24T01:57:18.816+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to add medical record: com.safetynet.alerts.model.MedicalRecord@76c5599b
+2024-11-24T01:57:18.816+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while adding medical record: com.safetynet.alerts.model.MedicalRecord@76c5599b
+
+java.io.IOException: null
+
+2024-11-24T01:57:18.818+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.818+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while adding the medical record."]
+2024-11-24T01:57:18.827+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.MedicalRecordController#updateMedicalRecord(MedicalRecord)
+2024-11-24T01:57:18.828+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.MedicalRecord@3d2ec8b2]
+2024-11-24T01:57:18.828+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Received request to update medical record: com.safetynet.alerts.model.MedicalRecord@3d2ec8b2
+2024-11-24T01:57:18.829+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.a.c.MedicalRecordController          : Error while updating medical record: com.safetynet.alerts.model.MedicalRecord@3d2ec8b2
+
+java.lang.RuntimeException: Simulated exception
+	at com.safetynet.alerts.service.MedicalRecordService.updateMedicalRecord(MedicalRecordService.java:81) ~[classes/:na]
+	at com.safetynet.alerts.controller.MedicalRecordController.updateMedicalRecord(MedicalRecordController.java:60) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.1.8.jar:6.1.8]
+	at com.safetynet.alerts.controller.MedicalRecordControllerTests.testUpdateMedicalRecord_InternalServerError(MedicalRecordControllerTests.java:107) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+
+2024-11-24T01:57:18.832+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:18.832+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while updating the medical record."]
+2024-11-24T01:57:18.844+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.safetynet.alerts.controller.PersonControllerTests]: PersonControllerTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-24T01:57:18.868+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.safetynet.alerts.SafetyNetAlertsApp for test class com.safetynet.alerts.controller.PersonControllerTests
+2024-11-24T01:57:18.907+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.PersonControllerTests   : Starting PersonControllerTests using Java 21.0.1 with PID 29972 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-24T01:57:18.907+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.PersonControllerTests   : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T01:57:18.909+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@38dde7ec
+2024-11-24T01:57:19.172+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 9 mappings in 'requestMappingHandlerMapping'
+2024-11-24T01:57:19.199+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-24T01:57:19.203+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-24T01:57:19.208+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-24T01:57:19.218+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-11-24T01:57:19.219+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-11-24T01:57:19.219+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-11-24T01:57:19.229+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.a.controller.PersonControllerTests   : Started PersonControllerTests in 0.356 seconds (process running for 7.955)
+2024-11-24T01:57:19.230+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-24T01:57:19.230+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-24T01:57:19.246+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-24T01:57:19.256+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-24T01:57:19.257+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-24T01:57:19.257+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-24T01:57:19.268+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getPhoneAlertByFirestation(int)
+2024-11-24T01:57:19.271+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for phone alert for firestation: 1
+2024-11-24T01:57:19.272+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : No phone numbers found for firestation: 1
+2024-11-24T01:57:19.272+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.272+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No phone numbers found for the specified firestation."]
+2024-11-24T01:57:19.281+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getChildAlertByAddress(String)
+2024-11-24T01:57:19.282+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for child alert at address: 123 Main St
+2024-11-24T01:57:19.285+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.safetynet.alerts.exception.GlobalExceptionHandler#handleAllExceptions(Exception)
+2024-11-24T01:57:19.286+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.286+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while processing the request."]
+2024-11-24T01:57:19.287+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Simulated Exception]
+2024-11-24T01:57:19.298+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#updatePerson(Person)
+2024-11-24T01:57:19.302+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Person@a6a7c4f]
+2024-11-24T01:57:19.303+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request to update person: com.safetynet.alerts.model.Person@a6a7c4f
+2024-11-24T01:57:19.304+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Person updated successfully: com.safetynet.alerts.model.Person@a6a7c4f
+2024-11-24T01:57:19.304+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.304+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Person updated successfully."]
+2024-11-24T01:57:19.313+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getChildAlertByAddress(String)
+2024-11-24T01:57:19.313+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for child alert at address: 123 Main St
+2024-11-24T01:57:19.314+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : No children found at address: 123 Main St
+2024-11-24T01:57:19.314+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.314+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No children found at the specified address."]
+2024-11-24T01:57:19.321+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getPhoneAlertByFirestation(int)
+2024-11-24T01:57:19.322+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for phone alert for firestation: 1
+2024-11-24T01:57:19.322+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Phone alert data retrieved for firestation 1: 098-765-4321
+123-456-7890
+2024-11-24T01:57:19.322+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.322+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["098-765-4321<EOL>123-456-7890"]
+2024-11-24T01:57:19.330+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#deletePerson(UUID)
+2024-11-24T01:57:19.332+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request to delete person with ID: 5ebd1679-60fc-4859-af32-aa5928c04c6b
+2024-11-24T01:57:19.332+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Person deleted successfully with ID: 5ebd1679-60fc-4859-af32-aa5928c04c6b
+2024-11-24T01:57:19.332+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.333+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Person deleted successfully."]
+2024-11-24T01:57:19.340+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getPersonInfoByLastName(String)
+2024-11-24T01:57:19.341+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for person info with lastName: Doe
+2024-11-24T01:57:19.342+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : No persons found with last name: Doe
+2024-11-24T01:57:19.343+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.343+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No persons found with the last name Doe"]
+2024-11-24T01:57:19.348+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getCommunityEmailsByCity(String)
+2024-11-24T01:57:19.350+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for community emails in city: Springfield
+2024-11-24T01:57:19.350+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Community email data retrieved for city Springfield: jane.doe@example.com
+john.doe@example.com
+2024-11-24T01:57:19.351+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.351+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["jane.doe@example.com<EOL>john.doe@example.com"]
+2024-11-24T01:57:19.357+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getCommunityEmailsByCity(String)
+2024-11-24T01:57:19.357+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for community emails in city: Springfield
+2024-11-24T01:57:19.358+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.safetynet.alerts.exception.GlobalExceptionHandler#handleAllExceptions(Exception)
+2024-11-24T01:57:19.359+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.359+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while processing the request."]
+2024-11-24T01:57:19.359+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Simulated Exception]
+2024-11-24T01:57:19.366+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getPersonInfoByLastName(String)
+2024-11-24T01:57:19.366+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for person info with lastName: Doe
+2024-11-24T01:57:19.367+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.safetynet.alerts.exception.GlobalExceptionHandler#handleAllExceptions(Exception)
+2024-11-24T01:57:19.367+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.367+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while processing the request."]
+2024-11-24T01:57:19.367+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Simulated Exception]
+2024-11-24T01:57:19.373+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#deletePerson(UUID)
+2024-11-24T01:57:19.374+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request to delete person with ID: 31c83172-9b40-4379-8aa3-0d702afe2a9f
+2024-11-24T01:57:19.374+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Person not found for deletion with ID: 31c83172-9b40-4379-8aa3-0d702afe2a9f
+2024-11-24T01:57:19.375+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.375+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Person not found."]
+2024-11-24T01:57:19.388+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getChildAlertByAddress(String)
+2024-11-24T01:57:19.389+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for child alert at address: 123 Main St
+2024-11-24T01:57:19.390+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Child alert data retrieved for address 123 Main St: Child { firstName: 'Jane', lastName: 'Doe', age: 10, householdMembers: [
+	PersonInfoDTO { firstName: 'John', lastName: 'Doe', address: '123 Main St', phone: '123-456-7890' }] }
+2024-11-24T01:57:19.390+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.391+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Child { firstName: 'Jane', lastName: 'Doe', age: 10, householdMembers: [<EOL>?PersonInfoDTO { firstName: (truncated)..."]
+2024-11-24T01:57:19.396+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getPhoneAlertByFirestation(int)
+2024-11-24T01:57:19.398+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for phone alert for firestation: 1
+2024-11-24T01:57:19.399+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : Using @ExceptionHandler com.safetynet.alerts.exception.GlobalExceptionHandler#handleAllExceptions(Exception)
+2024-11-24T01:57:19.399+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.399+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while processing the request."]
+2024-11-24T01:57:19.400+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Simulated Exception]
+2024-11-24T01:57:19.405+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#deletePerson(UUID)
+2024-11-24T01:57:19.405+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request to delete person with ID: 73f5f9a4-7a79-4661-89fd-d511e019348e
+2024-11-24T01:57:19.406+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Error while deleting person with ID: 73f5f9a4-7a79-4661-89fd-d511e019348e
+
+java.io.IOException: Simulated IO Exception
+	at com.safetynet.alerts.service.PersonService.deletePerson(PersonService.java:129) ~[classes/:na]
+	at com.safetynet.alerts.controller.PersonController.deletePerson(PersonController.java:89) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.1.8.jar:6.1.8]
+	at com.safetynet.alerts.controller.PersonControllerTests.testDeletePerson_Error(PersonControllerTests.java:195) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+
+2024-11-24T01:57:19.408+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.408+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while deleting the person."]
+2024-11-24T01:57:19.415+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#updatePerson(Person)
+2024-11-24T01:57:19.416+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Person@6afed88d]
+2024-11-24T01:57:19.417+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request to update person: com.safetynet.alerts.model.Person@6afed88d
+2024-11-24T01:57:19.417+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Person not found for update: 9a03ad16-45eb-4468-adfc-90cd593c935d
+2024-11-24T01:57:19.417+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.418+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Person not found."]
+2024-11-24T01:57:19.425+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#updatePerson(Person)
+2024-11-24T01:57:19.425+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Person@36f291c7]
+2024-11-24T01:57:19.426+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request to update person: com.safetynet.alerts.model.Person@36f291c7
+2024-11-24T01:57:19.426+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Error while updating person: com.safetynet.alerts.model.Person@36f291c7
+
+java.lang.RuntimeException: Simulated Exception
+	at com.safetynet.alerts.service.PersonService.updatePerson(PersonService.java:55) ~[classes/:na]
+	at com.safetynet.alerts.controller.PersonController.updatePerson(PersonController.java:64) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:925) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:593) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.1.8.jar:6.1.8]
+	at com.safetynet.alerts.controller.PersonControllerTests.testUpdatePerson_Error(PersonControllerTests.java:145) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+
+2024-11-24T01:57:19.428+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.428+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while updating the person."]
+2024-11-24T01:57:19.439+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getPersonInfoByLastName(String)
+2024-11-24T01:57:19.439+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for person info with lastName: Doe
+2024-11-24T01:57:19.440+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Person info data retrieved for lastName Doe: 
+PersonInfoLastNameDTO { lastName: 'Doe', address: '123 Main St', age: 30, email: 'john.doe@example.com', medications: [med1, med2], allergies: [allergy1] }
+2024-11-24T01:57:19.441+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.441+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["<EOL>PersonInfoLastNameDTO { lastName: 'Doe', address: '123 Main St', age: 30, email: 'john.doe@example. (truncated)..."]
+2024-11-24T01:57:19.447+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#addPerson(Person)
+2024-11-24T01:57:19.449+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Person@1928dc66]
+2024-11-24T01:57:19.449+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request to add a person: com.safetynet.alerts.model.Person@1928dc66
+2024-11-24T01:57:19.450+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Error while adding person: com.safetynet.alerts.model.Person@1928dc66
+
+java.io.IOException: Simulated IO Exception
+	at com.safetynet.alerts.service.PersonService.addPerson(PersonService.java:43) ~[classes/:na]
+	at com.safetynet.alerts.controller.PersonController.addPerson(PersonController.java:44) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.TestDispatcherServlet.service(TestDispatcherServlet.java:72) ~[spring-test-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.mock.web.MockFilterChain$ServletFilterProxy.doFilter(MockFilterChain.java:165) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.setup.MockMvcFilterDecorator.doFilter(MockMvcFilterDecorator.java:151) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.mock.web.MockFilterChain.doFilter(MockFilterChain.java:132) ~[spring-test-6.1.8.jar:6.1.8]
+	at org.springframework.test.web.servlet.MockMvc.perform(MockMvc.java:201) ~[spring-test-6.1.8.jar:6.1.8]
+	at com.safetynet.alerts.controller.PersonControllerTests.testAddPerson_Error(PersonControllerTests.java:93) ~[test-classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728) ~[junit-platform-commons-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.2.jar:5.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.5.jar:3.2.5]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.5.jar:3.2.5]
+
+2024-11-24T01:57:19.451+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.452+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["An error occurred while adding the person."]
+2024-11-24T01:57:19.461+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#addPerson(Person)
+2024-11-24T01:57:19.463+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [com.safetynet.alerts.model.Person@47e82067]
+2024-11-24T01:57:19.463+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request to add a person: com.safetynet.alerts.model.Person@47e82067
+2024-11-24T01:57:19.464+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Person added successfully: com.safetynet.alerts.model.Person@47e82067
+2024-11-24T01:57:19.465+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.465+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Person added successfully."]
+2024-11-24T01:57:19.473+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.safetynet.alerts.controller.PersonController#getCommunityEmailsByCity(String)
+2024-11-24T01:57:19.474+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : Received request for community emails in city: Springfield
+2024-11-24T01:57:19.475+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.controller.PersonController   : No email addresses found for city: Springfield
+2024-11-24T01:57:19.475+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+2024-11-24T01:57:19.476+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["No email addresses found for the specified city."]
+2024-11-24T01:57:19.530+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : Starting SafetyNetAlertsAppTests using Java 21.0.1 with PID 29972 (started by AradGHORRESHI in C:\Users\AradGHORRESHI\Documents\apprentissage\openclassrooms\Projet 5 - OpenClassrooms)
+2024-11-24T01:57:19.530+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : No active profile set, falling back to 1 default profile: "default"
+2024-11-24T01:57:19.532+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7b70596d
+2024-11-24T01:57:20.039+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 18 mappings in 'requestMappingHandlerMapping'
+2024-11-24T01:57:20.065+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-11-24T01:57:20.070+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-11-24T01:57:20.074+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-11-24T01:57:20.111+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.SafetyNetAlertsAppTests       : Started SafetyNetAlertsAppTests in 0.61 seconds (process running for 8.838)
+2024-11-24T01:57:20.112+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Initializing data loading process...
+2024-11-24T01:57:20.112+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Starting data loading process from file: data.json
+2024-11-24T01:57:20.122+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Starting the process of saving data to file: data.json
+2024-11-24T01:57:20.130+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.JsonFileUtil       : Data successfully saved to file: data.json
+2024-11-24T01:57:20.130+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.repository.DataLoader         : Data successfully loaded and saved from file: data.json
+2024-11-24T01:57:20.130+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.safetynet.alerts.SafetyNetAlertsApp    : Data loaded successfully.
+2024-11-24T01:57:20.222+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Adding medical record: com.safetynet.alerts.model.MedicalRecord@4e74adb
+2024-11-24T01:57:20.223+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record added successfully.
+2024-11-24T01:57:20.227+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Updating medical record: com.safetynet.alerts.model.MedicalRecord@787345aa
+2024-11-24T01:57:20.227+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record updated: com.safetynet.alerts.model.MedicalRecord@3e71b1a4
+2024-11-24T01:57:20.229+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record updated successfully: com.safetynet.alerts.model.MedicalRecord@3e71b1a4
+2024-11-24T01:57:20.242+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Searching for medical record with ID: d61ce9ac-0903-413b-8301-dacd3f1b1c0d
+2024-11-24T01:57:20.242+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record found: com.safetynet.alerts.model.MedicalRecord@1cfc616
+2024-11-24T01:57:20.246+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Retrieving medical record for person: Jane Doe
+2024-11-24T01:57:20.247+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record found: com.safetynet.alerts.model.MedicalRecord@66979fed
+2024-11-24T01:57:20.251+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Retrieving medical record for person: Jane Doe
+2024-11-24T01:57:20.252+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record found: com.safetynet.alerts.model.MedicalRecord@308f13dc
+2024-11-24T01:57:20.255+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Retrieving medical record for person: John Doe
+2024-11-24T01:57:20.256+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record found: com.safetynet.alerts.model.MedicalRecord@b692323
+2024-11-24T01:57:20.260+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Retrieving medical record for person: John Doe
+2024-11-24T01:57:20.261+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : No medical record found for person: John Doe
+2024-11-24T01:57:20.265+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Searching for medical record with ID: ab5a6bf5-6fc8-45da-9881-751fba03aaa6
+2024-11-24T01:57:20.266+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : No medical record found with ID: ab5a6bf5-6fc8-45da-9881-751fba03aaa6
+2024-11-24T01:57:20.272+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Deleting medical record with ID: ccb47f95-e60d-404c-94e8-6275d2aa7320
+2024-11-24T01:57:20.274+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record deleted successfully: ccb47f95-e60d-404c-94e8-6275d2aa7320
+2024-11-24T01:57:20.277+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Retrieving all medical records.
+2024-11-24T01:57:20.281+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Deleting medical record with ID: e87e28e8-8079-4077-a56d-61398d384dbd
+2024-11-24T01:57:20.282+01:00 ERROR 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.MedicalRecordService  : Medical record not found for deletion: e87e28e8-8079-4077-a56d-61398d384dbd
+2024-11-24T01:57:20.401+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieving emails for city: Springfield
+2024-11-24T01:57:20.404+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieved 1 email addresses for city: Springfield
+2024-11-24T01:57:20.408+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieving phone numbers for firestation: 1
+2024-11-24T01:57:20.408+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieving persons covered by firestation number: 1
+2024-11-24T01:57:20.410+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieved 1 persons covered by firestation number: 1
+2024-11-24T01:57:20.410+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieved 1 phone numbers for firestation: 1
+2024-11-24T01:57:20.414+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieving children by address: 123 Main St
+2024-11-24T01:57:20.416+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieved 1 children at address: 123 Main St
+2024-11-24T01:57:20.421+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieving persons covered by firestation number: 1
+2024-11-24T01:57:20.422+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Retrieved 1 persons covered by firestation number: 1
+2024-11-24T01:57:20.426+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Deleting person with ID: 4592ab0d-56d9-4322-be80-e93e8ddf3a9c
+2024-11-24T01:57:20.427+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Person deleted successfully.
+2024-11-24T01:57:20.430+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Adding a new person: com.safetynet.alerts.model.Person@4ed2eee1
+2024-11-24T01:57:20.430+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Person added successfully.
+2024-11-24T01:57:20.433+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Updating person: com.safetynet.alerts.model.Person@7454f141
+2024-11-24T01:57:20.435+01:00  INFO 29972 --- [SafetyNetAlertsApp] [main] c.s.alerts.service.PersonService         : Person updated successfully: com.safetynet.alerts.model.Person@62c6c467
+2024-11-24T01:57:20.451+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@26e8ff8c, started on Sun Nov 24 01:57:14 CET 2024
+2024-11-24T01:57:20.457+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@18a8a40e, started on Sun Nov 24 01:57:18 CET 2024
+2024-11-24T01:57:20.459+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@38dde7ec, started on Sun Nov 24 01:57:18 CET 2024
+2024-11-24T01:57:20.460+01:00 DEBUG 29972 --- [SafetyNetAlertsApp] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@7b70596d, started on Sun Nov 24 01:57:19 CET 2024

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 public class MedicalRecord {
-    private final UUID id = UUID.randomUUID();
+    private UUID id = UUID.randomUUID();
     private String firstName;
     private String lastName;
     private String birthdate;
@@ -65,5 +65,9 @@ public class MedicalRecord {
 
     public void setAllergies(List<String> allergies) {
         this.allergies = allergies;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 }
